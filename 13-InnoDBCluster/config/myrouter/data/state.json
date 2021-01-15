@@ -1,0 +1,11 @@
+{
+    "metadata-cache": {
+        "group-replication-id": "4e8a2caf-3533-11eb-900e-020017076845",
+        "cluster-metadata-servers": [
+            "mysql://ivanma-demo1:3310",
+            "mysql://ivanma-demo1:3320",
+            "mysql://ivanma-demo1:3330"
+        ]
+    },
+    "version": "1.0.0"
+}

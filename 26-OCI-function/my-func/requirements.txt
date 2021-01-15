@@ -1,0 +1,5 @@
+fdk
+pip
+mysql-connector-python
+netifaces 
+oci>=2.2.18

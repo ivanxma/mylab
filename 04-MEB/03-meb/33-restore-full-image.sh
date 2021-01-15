@@ -1,0 +1,1 @@
+../../04-MEB/EncryptedBackup/33-restore-full-image.sh

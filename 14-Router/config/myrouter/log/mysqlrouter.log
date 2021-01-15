@@ -1,0 +1,18 @@
+2020-01-21 15:22:49 http_server INFO [7f1632aa3780] listening on 0.0.0.0:8080
+2020-01-21 15:22:49 metadata_cache INFO [7f162cd1a700] Starting Metadata Cache
+2020-01-21 15:22:49 metadata_cache INFO [7f162cd1a700] Connections using ssl_mode 'PREFERRED'
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700] Starting metadata cache refresh thread
+2020-01-21 15:22:49 routing INFO [7f160e7fc700] [routing:mycluster_ro] started: listening on 0.0.0.0:6447, routing strategy = round-robin-with-fallback
+2020-01-21 15:22:49 routing INFO [7f160dffb700] [routing:mycluster_rw] started: listening on 0.0.0.0:6446, routing strategy = first-available
+2020-01-21 15:22:49 routing INFO [7f160d7fa700] [routing:mycluster_x_ro] started: listening on 0.0.0.0:64470, routing strategy = round-robin-with-fallback
+2020-01-21 15:22:49 routing INFO [7f160cff9700] [routing:mycluster_x_rw] started: listening on 0.0.0.0:64460, routing strategy = first-available
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700] Potential changes detected in cluster 'mycluster' after metadata refresh
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700] Metadata for cluster 'mycluster' has 1 replicasets:
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700] 'default' (3 members, single-master)
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700]     primary:3310 / 33100 - role=HA mode=RW
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700]     primary:3320 / 33200 - role=HA mode=RO
+2020-01-21 15:22:49 metadata_cache INFO [7f1632a9f700]     primary:3330 / 33300 - role=HA mode=RO
+2020-01-21 15:22:49 routing INFO [7f1632a9f700] Routing routing:mycluster_ro listening on 6447 got request to disconnect invalid connections: metadata change
+2020-01-21 15:22:49 routing INFO [7f1632a9f700] Routing routing:mycluster_x_ro listening on 64470 got request to disconnect invalid connections: metadata change
+2020-01-21 15:22:49 routing INFO [7f1632a9f700] Routing routing:mycluster_rw listening on 6446 got request to disconnect invalid connections: metadata change
+2020-01-21 15:22:49 routing INFO [7f1632a9f700] Routing routing:mycluster_x_rw listening on 64460 got request to disconnect invalid connections: metadata change

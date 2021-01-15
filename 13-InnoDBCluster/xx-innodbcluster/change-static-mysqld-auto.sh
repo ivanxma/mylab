@@ -1,0 +1,1 @@
+../../util/change-static-mysqld-auto.sh

@@ -1,0 +1,27 @@
+[mysqld]
+explicit_defaults_for_timestamp
+server-id=2
+datadir=/home/mysql/data/31b
+basedir=/usr/local/mysql
+
+port=3326
+socket=/home/mysql/data/31b/mysqld.sock
+
+mysqlx-port=33260
+mysqlx-socket=/home/mysql/data/31b/mysqlx.sock
+
+character-set-server=utf8mb4
+log-error=/home/mysql/data/31b/mysqld.error
+sql-mode=NO_ENGINE_SUBSTITUTION,ONLY_FULL_GROUP_BY
+
+relay-log=relay.bin
+log-bin=mysqllog.bin
+gtid-mode=on
+enforce-gtid-consistency
+
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+# relay log file 
+
+#slave_parallel_type=LOGICAL_CLOCK
+#slave_parallel_workers=5

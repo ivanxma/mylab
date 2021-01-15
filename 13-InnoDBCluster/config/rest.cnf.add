@@ -1,0 +1,22 @@
+[http_server]
+port=8080
+
+[rest_api]
+
+[rest_router]
+require_realm=myrealm
+
+[rest_routing]
+require_realm=myrealm
+
+[rest_metadata_cache]
+require_realm=myrealm
+
+[http_auth_realm:myrealm]
+backend=mybackend
+method=basic
+name=Some Realm
+
+[http_auth_backend:mybackend]
+backend=file
+filename=/opt/download/lab/13-InnoDBCluster/config/mysqlrouter.pwd

@@ -1,0 +1,31 @@
+{
+ "services" :  [
+  { 
+    "id": "router1",
+    "name": "router",
+    "tags": [ "rw" ],
+    "address": "192.168.56.41",
+    "port": 6446,
+    "checks": [
+      {
+        "args": ["/opt/download/lab/consul/check1-6446.sh"],
+        "interval": "10s"
+      }
+    ]
+  },
+  { 
+    "id": "router2",
+    "name": "router",
+    "tags": [ "rw" ],
+    "address": "192.168.56.42",
+    "port": 6446,
+    "checks": [
+      {
+        "args": ["/opt/download/lab/consul/check2-6446.sh"],
+        "interval": "10s"
+      }
+    ]
+  }
+  ]
+
+}

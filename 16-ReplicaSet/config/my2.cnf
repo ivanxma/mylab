@@ -1,0 +1,27 @@
+[mysqld]
+datadir=/home/mysql/data/3320
+basedir=/usr/local/mysql
+log-error=/home/mysql/data/3320/my.error
+port=3320
+socket=/home/mysql/data/3320/my.sock
+mysqlx-port=33200
+mysqlx-socket=/home/mysql/data/3320/myx.sock
+log-bin=logbin
+relay-log=logrelay
+binlog-format=row
+binlog-checksum=NONE
+server-id=102
+
+# enable gtid
+gtid-mode=on
+enforce-gtid-consistency=true
+log-slave-updates=true
+
+# Table based repositories
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+
+# Extraction Algorithm
+transaction-write-set-extraction=XXHASH64
+
+report-host=primary

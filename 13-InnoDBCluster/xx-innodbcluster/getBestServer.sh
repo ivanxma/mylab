@@ -1,0 +1,1 @@
+../getBestServer.sh

@@ -1,0 +1,9 @@
+1. VM1 : a running InnoDB Cluster
+
+2. VM1 : mysqlrouter : 6446
+
+3. VM2 : mysqlrouter : 6446
+
+4. Starting this Lab to install consul pointing to the services
+	the services is to point to 192.168.56.41:6446 and 192.168.56.42:6446
+

@@ -1,0 +1,2 @@
+. ./uninstallRPM.sh
+

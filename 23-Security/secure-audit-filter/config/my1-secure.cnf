@@ -1,0 +1,15 @@
+[mysqld]
+check_proxy_users=true
+mysql_native_password_proxy_users=true
+explicit_defaults_for_timestamp
+
+basedir=/usr/local/mysql
+datadir=/home/mysql/data/lab23
+port=3306
+server_id=1
+socket=/home/mysql/data/lab23/secure.sock
+log-error=/home/mysql/data/lab23/mysqld.error
+
+secure_file_priv=NULL
+#plugin-load-add=validate_password.so
+#validate_password_check_user_name=ON

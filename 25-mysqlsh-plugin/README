@@ -1,0 +1,10 @@
+They are the examples of plugin using python
+
+The plugin folder is copied to the ~/.mysqlsh/plugins
+
+When mysqlsh starts, it looks for all init.py (or init.js) within those ext folders in plugins
+
+https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-plugins-examples.html
+This example defines a function show_processes() to display the currently running processes, and a function kill_process() to kill a process with a specified ID. show_processes() is going to be a MySQL Shell report, and kill_process() is going to be a function provided by an extension object. 
+
+It also registers the shell report 'sessions'

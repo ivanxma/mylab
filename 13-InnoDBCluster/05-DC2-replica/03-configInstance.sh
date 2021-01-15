@@ -1,0 +1,7 @@
+. ./comm.sh
+
+mysqlsh -e "
+dba.configureInstance('root:@localhost:3340',{clusterAdmin:'gradmin',clusterAdminPassword:'grpass'});
+dba.configureInstance('root:@localhost:3350',{clusterAdmin:'gradmin',clusterAdminPassword:'grpass'});
+dba.configureInstance('root:@localhost:3360',{clusterAdmin:'gradmin',clusterAdminPassword:'grpass'});
+"

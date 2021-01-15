@@ -1,0 +1,19 @@
+# Server wide settings for MySQL Workbench, Enterprise Backup
+
+[meb_manager]
+mysql_instance_1 = /home/mysql/data/3306/
+
+[mysql_instance_1]
+command = /usr/local/mysql/bin/mysqlbackup
+home = /home/mysql/backup/wb
+user = mysqlbackup
+password = mysqlbackup
+host = virtual-41.localhost
+port = 3306
+protocol = SOCKET
+socket = /home/mysql/data/3306/mysqld.sock
+datadir = /home/mysql/data/3306/
+innodb_data_home_dir = 
+mysql_version = 8.0.19-commercial
+datadir_owner = mysql
+

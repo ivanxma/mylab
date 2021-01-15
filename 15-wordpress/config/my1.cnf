@@ -1,0 +1,9 @@
+[mysqld]
+datadir=/home/mysql/data-lab/wordpressdb
+basedir=/usr/local/mysql
+port=3306
+symbolic-links=0
+log-error=/home/mysql/data-lab/wordpressdb/mysqld.log
+character-set-server=utf8mb4
+
+

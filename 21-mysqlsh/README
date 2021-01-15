@@ -1,0 +1,18 @@
+
+https://dev.mysql.com/doc/dev/connector-net/html/connector-net-x-devapi-getting-started.htm
+
+X Dev API reference document 
+https://dev.mysql.com/doc/x-devapi-userguide/en/devapi-users-introduction.html
+
+This lab is created with the following content (basically using javascript)
+1. Installation with default setting of X-Plugin
+2. Login using MySQL Shell 
+3. Getting Schema and showing tables and collections
+4. Loading the Sample Database 'world_x'
+5. Assigning Variable schema and list the result from collection : world_x.countryinfo
+6. Creating a new collection in world_x "mytest01" together with using transaction to insert 3 documents
+7. Error Handling 
+8. Adding Generated Columns to the newly created collection "mytest01"
+ 
+
+

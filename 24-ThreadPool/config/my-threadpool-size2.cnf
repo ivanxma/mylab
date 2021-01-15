@@ -1,0 +1,11 @@
+[mysqld]
+datadir=/home/mysql/data/lab24
+basedir=/usr/local/mysql
+port=3306
+symbolic-links=0
+log-error=/home/mysql/data/lab24/mysqld.log
+
+plugin-load=thread_pool.so
+thread_pool_size=2
+
+

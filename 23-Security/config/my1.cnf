@@ -1,0 +1,36 @@
+[mysqld]
+check_proxy_users=true
+mysql_native_password_proxy_users=true
+explicit_defaults_for_timestamp
+basedir=/usr/local/mysql
+datadir=/home/mysql/data/lab23
+port=3306
+server_id=1
+socket=/home/mysql/data/lab23/secure.sock
+log-error=/home/mysql/data/lab23/mysqld.error
+
+# gtid enable with the following 3 options
+log-slave-updates=true
+gtid-mode=on
+enforce-gtid-consistency=true
+# gtid enable---END
+
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+
+sync-master-info=1
+report-port=3306
+log-bin=myreplication1-bin.log
+
+#ThreadPool
+#plugin-load=thread_pool.so
+# Same as 
+#plugin-load=thread_pool.so;tp_thread_state=thread_pool.so;tp_thread_group_state=thread_pool.so;tp_thread_group_stats=thread_pool.so
+# if only the TP_THREAD_STATE in information schema
+#plugin-load=thread_pool.so;TP_THREAD_STATE=thread_pool.so
+
+
+# Connection Control
+plugin-load-add=connection_control.so
+connection-control=FORCE_PLUS_PERMANENT
+connection-control-failed-login-attempts=FORCE_PLUS_PERMANENT

@@ -1,0 +1,14 @@
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes|jq
+echo "Press <ENTER> to continue";read
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes/mycluster_rw/health|jq
+echo "Press <ENTER> to continue";read
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes/mycluster_rw/status|jq
+echo "Press <ENTER> to continue";read
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes/mycluster_rw/config|jq
+echo "Press <ENTER> to continue";read
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes/mycluster_rw/connections|jq
+echo "Press <ENTER> to continue";read
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes/mycluster_rw/destinations|jq
+echo "Press <ENTER> to continue";read
+ curl -s -u myuser:myuser http://localhost:8080/api/20190715/routes/mycluster_rw/blockedHosts|jq
+echo "Press <ENTER> to continue";read

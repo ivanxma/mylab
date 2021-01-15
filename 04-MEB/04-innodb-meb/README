@@ -1,0 +1,41 @@
+Assuming we have 3306 MySQL Instance!
+
+01-startOnly3306.sh  
+	- Only One Instance to be started.   
+	- It kills ALL Instances and start only 3306.
+02-configureInstance.sh
+	- Using mysqlsh to configureInstance to create remote admin user (gradmin/grpass)
+
+03-meb-backup-image.sh
+	- Backup 3306 -  the image is used to provision another 2 instances
+
+41-restore-image-To-3316and3326.sh
+	- Using the backup image to restore 3316 and 3326 
+
+42-startDB.sh
+	- Startup 3316 and 3326
+
+43-createInnoDBCluster.sh
+	- Create InnoDB Cluste
+
+51-Node3326Crashed.sh
+	- To demonstrate 3326 is crashed.   It removed the WHOLE directory of 3326.
+	- BUT it copies the auto.cnf and mysqld-auto.cnf
+	- auto.cnf has the Server UUID 
+	- mysqld-auto.cnf has the Persisted Variables
+
+52-meb-backup-node3316.sh
+	- Backup 3316 data - 3316 is READ-ONLY server, it uses --no-history-logging as option
+
+53-Restore3326.sh
+	- Restore the 3316 data to provision the 3326
+	- COPY back the auto.cnf and mysqld-auto.cnf
+
+54-start3326.sh
+	- Note : Please check the Cluster status - make sure 3326 has status - 'MISSING'.  
+	- If it is UNREACHABLE, wait until 'MISSING' in order to proceed to start up 3326
+	- Startup 3326
+	- 3326 should connect back to the InnoDB CLUSTER.
+
+99-InnoDBClusterStatus.sh
+	- Check the InnoDB Cluster Status - conneting to 3306

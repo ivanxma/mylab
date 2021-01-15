@@ -1,0 +1,441 @@
+2020-01-14 16:39:47 routing INFO [7f4271a98700] [routing:myrs_ro] started: listening on 0.0.0.0:6447, routing strategy = round-robin-with-fallback
+2020-01-14 16:39:47 routing INFO [7f4271297700] [routing:myrs_rw] started: listening on 0.0.0.0:6446, routing strategy = first-available
+2020-01-14 16:39:47 routing INFO [7f4270a96700] [routing:myrs_x_ro] started: listening on 0.0.0.0:64470, routing strategy = round-robin-with-fallback
+2020-01-14 16:39:47 routing INFO [7f4263fff700] [routing:myrs_x_rw] started: listening on 0.0.0.0:64460, routing strategy = first-available
+2020-01-14 16:39:47 metadata_cache INFO [7f4272299700] Starting Metadata Cache
+2020-01-14 16:39:47 metadata_cache INFO [7f4272299700] Connections using ssl_mode 'PREFERRED'
+2020-01-14 16:39:47 metadata_cache INFO [7f42756c7700] Starting metadata cache refresh thread
+2020-01-14 16:39:47 metadata_cache INFO [7f42756c7700] Potential changes detected in cluster 'myrs' after metadata refresh
+2020-01-14 16:39:47 metadata_cache INFO [7f42756c7700] view_id = 4, (3 members)
+2020-01-14 16:39:47 metadata_cache INFO [7f42756c7700]     primary:3310 / 33100 - role=HA mode=RW
+2020-01-14 16:39:47 metadata_cache INFO [7f42756c7700]     primary:3320 / 33200 - role=HA mode=RO
+2020-01-14 16:39:47 metadata_cache INFO [7f42756c7700]     primary:3330 / 33300 - role=HA mode=RO
+2020-01-14 16:39:47 routing INFO [7f42756c7700] Routing routing:myrs_x_rw listening on 64460 got request to disconnect invalid connections: metadata change
+2020-01-14 16:39:47 routing INFO [7f42756c7700] Routing routing:myrs_x_ro listening on 64470 got request to disconnect invalid connections: metadata change
+2020-01-14 16:39:47 routing INFO [7f42756c7700] Routing routing:myrs_ro listening on 6447 got request to disconnect invalid connections: metadata change
+2020-01-14 16:39:47 routing INFO [7f42756c7700] Routing routing:myrs_rw listening on 6446 got request to disconnect invalid connections: metadata change
+2020-01-14 16:41:14 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:14 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:14 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:14 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:15 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:15 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:16 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:16 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:16 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:16 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:16 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:16 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:17 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:17 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:17 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:17 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:18 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:18 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:18 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:18 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:19 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:19 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:19 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:19 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:20 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:20 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:20 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:20 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:21 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:21 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:21 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:21 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:22 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:22 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:22 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:22 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:23 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:23 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:23 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:23 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:24 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:24 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:24 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:24 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:25 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:25 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:25 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:25 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:26 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:26 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:26 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:26 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:26 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:26 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:27 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:27 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:27 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:27 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:28 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:28 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:29 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:29 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:29 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:29 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:30 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:30 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:30 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:30 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:31 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:31 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:31 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:31 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:31 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:32 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:32 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:32 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:32 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:32 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:33 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:33 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:33 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:33 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:34 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:34 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:34 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:34 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:35 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:35 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:35 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:35 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:36 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:36 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:36 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:37 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:37 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:37 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:37 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:37 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:38 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:38 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:38 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:38 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:39 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:39 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:39 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:39 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:40 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:40 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:40 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:40 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:41 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:41 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:41 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:41 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:41 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:42 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:42 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:42 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:42 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:42 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:43 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:43 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:43 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:43 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:44 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:44 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:45 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:45 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:45 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:45 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:46 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:46 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:46 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:46 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:46 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:47 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:47 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:47 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:47 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:48 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:48 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:48 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:48 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:48 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:49 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:49 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:49 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:49 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:50 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:50 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:51 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:51 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:51 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:51 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:51 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:52 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:52 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:52 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:52 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:53 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:53 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:53 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:53 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:53 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:54 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:54 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:54 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:54 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:55 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:55 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:55 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:55 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:56 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:56 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:56 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:41:56 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:56 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:57 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:57 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:57 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:57 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:58 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:58 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:59 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:59 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:41:59 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:41:59 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:41:59 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:00 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:00 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:00 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:00 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:01 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:01 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:01 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:01 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:01 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:02 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:02 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:02 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:02 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:03 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:03 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:03 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:03 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:04 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:04 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:04 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:05 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:05 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:05 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:05 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:06 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:06 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:06 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:06 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:06 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:07 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:07 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:07 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:07 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:08 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:08 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:08 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:08 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:09 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:09 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:09 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:09 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:09 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:10 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:10 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:10 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:10 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:11 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:11 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:11 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:12 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:12 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:12 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:12 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:13 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:13 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:13 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:13 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:14 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:14 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:14 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:14 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:15 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:15 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:15 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:15 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:15 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:16 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:16 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:16 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:16 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:16 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:17 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:17 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:17 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:17 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:18 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:18 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:19 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:19 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:19 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:19 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:20 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:20 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:20 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:20 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:20 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:21 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:21 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:21 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:21 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:21 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:22 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:22 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:22 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:22 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:23 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:23 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:23 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:23 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:24 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:24 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:24 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:24 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:25 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:25 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:26 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:26 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:26 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:26 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:26 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:26 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:27 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:27 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:27 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:27 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:28 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:28 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:28 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:28 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:29 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:29 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:29 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:29 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:30 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:30 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:30 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:30 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:31 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:31 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:31 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:31 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:31 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:31 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:32 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:32 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:32 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:32 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:33 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:33 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:34 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:34 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:34 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:34 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:35 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:35 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:35 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:35 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:36 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:36 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:36 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:36 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:36 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:36 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:37 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:37 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:37 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:37 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:38 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:38 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:38 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:38 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:39 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:39 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:39 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:39 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:40 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:40 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:41 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:41 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:41 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:41 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:41 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:42 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:42 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:42 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:42 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:42 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:43 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:43 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:43 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:43 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:44 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:44 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:44 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:44 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:45 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:45 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:45 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:45 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:46 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:46 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:46 routing WARNING [7f4270295700] [routing:myrs_rw] fd=9 Can't connect to remote MySQL server for client connected to '0.0.0.0:6446'
+2020-01-14 16:42:46 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:46 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:47 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:47 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:47 metadata_cache WARNING [7f42756c7700] Updating the router last_check_in in metadata failed: Could not connect to the writable cluster member
+2020-01-14 16:42:47 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:47 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:48 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:48 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:48 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:48 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:49 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:49 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:49 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:49 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:50 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:50 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:51 metadata_cache WARNING [7f42756c7700] Failed connecting with Metadata Server primary:3310: Can't connect to MySQL server on 'primary' (111) (2003)
+2020-01-14 16:42:51 metadata_cache WARNING [7f42756c7700] Could not connect to the instance: 566b8f77-36a1-11ea-9d25-0800275dbca0 on primary:3310
+2020-01-14 16:42:51 metadata_cache INFO [7f42756c7700] Potential changes detected in cluster 'myrs' after metadata refresh
+2020-01-14 16:42:51 metadata_cache INFO [7f42756c7700] view_id = 65536, (2 members)
+2020-01-14 16:42:51 metadata_cache INFO [7f42756c7700]     primary:3320 / 33200 - role=HA mode=RW
+2020-01-14 16:42:51 metadata_cache INFO [7f42756c7700]     primary:3330 / 33300 - role=HA mode=RO
+2020-01-14 16:42:51 routing INFO [7f42756c7700] Routing routing:myrs_x_rw listening on 64460 got request to disconnect invalid connections: metadata change
+2020-01-14 16:42:51 routing INFO [7f42756c7700] Routing routing:myrs_x_ro listening on 64470 got request to disconnect invalid connections: metadata change
+2020-01-14 16:42:51 routing INFO [7f42756c7700] Routing routing:myrs_ro listening on 6447 got request to disconnect invalid connections: metadata change
+2020-01-14 16:42:51 routing INFO [7f42756c7700] Routing routing:myrs_rw listening on 6446 got request to disconnect invalid connections: metadata change
+2020-01-14 17:02:27 metadata_cache INFO [7f42756c7700] Potential changes detected in cluster 'myrs' after metadata refresh
+2020-01-14 17:02:27 metadata_cache INFO [7f42756c7700] view_id = 65537, (3 members)
+2020-01-14 17:02:27 metadata_cache INFO [7f42756c7700]     primary:3310 / 33100 - role=HA mode=RO
+2020-01-14 17:02:27 metadata_cache INFO [7f42756c7700]     primary:3320 / 33200 - role=HA mode=RW
+2020-01-14 17:02:27 metadata_cache INFO [7f42756c7700]     primary:3330 / 33300 - role=HA mode=RO
+2020-01-14 17:02:27 routing INFO [7f42756c7700] Routing routing:myrs_x_rw listening on 64460 got request to disconnect invalid connections: metadata change
+2020-01-14 17:02:27 routing INFO [7f42756c7700] Routing routing:myrs_x_ro listening on 64470 got request to disconnect invalid connections: metadata change
+2020-01-14 17:02:27 routing INFO [7f42756c7700] Routing routing:myrs_ro listening on 6447 got request to disconnect invalid connections: metadata change
+2020-01-14 17:02:27 routing INFO [7f42756c7700] Routing routing:myrs_rw listening on 6446 got request to disconnect invalid connections: metadata change
+2020-01-14 17:10:02 metadata_cache INFO [7f42756c7700] Potential changes detected in cluster 'myrs' after metadata refresh
+2020-01-14 17:10:02 metadata_cache INFO [7f42756c7700] view_id = 65538, (3 members)
+2020-01-14 17:10:02 metadata_cache INFO [7f42756c7700]     primary:3310 / 33100 - role=HA mode=RW
+2020-01-14 17:10:02 metadata_cache INFO [7f42756c7700]     primary:3320 / 33200 - role=HA mode=RO
+2020-01-14 17:10:02 metadata_cache INFO [7f42756c7700]     primary:3330 / 33300 - role=HA mode=RO
+2020-01-14 17:10:02 routing INFO [7f42756c7700] Routing routing:myrs_x_rw listening on 64460 got request to disconnect invalid connections: metadata change
+2020-01-14 17:10:02 routing INFO [7f42756c7700] Routing routing:myrs_x_ro listening on 64470 got request to disconnect invalid connections: metadata change
+2020-01-14 17:10:02 routing INFO [7f42756c7700] Routing routing:myrs_ro listening on 6447 got request to disconnect invalid connections: metadata change
+2020-01-14 17:10:02 routing INFO [7f42756c7700] Routing routing:myrs_rw listening on 6446 got request to disconnect invalid connections: metadata change

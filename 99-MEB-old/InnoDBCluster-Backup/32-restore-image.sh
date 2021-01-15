@@ -1,0 +1,1 @@
+../32-restore-image.sh

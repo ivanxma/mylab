@@ -1,0 +1,1 @@
+../../02-Admin/02-initDB-with-config.sh

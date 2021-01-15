@@ -1,0 +1,14 @@
+loose_group_replication_poll_spin_loops=0
+loose_group_replication_components_stop_timeout=3153600
+loose_group_replication_allow_local_lower_version_join=off
+loose_group_replication_auto_increment_increment=7
+loose_group_replication_transaction_size_limit=0
+loose_group_replication_flow_control_mode=QUOTA
+
+# 5.7.19 - new parameters
+loose_group_replication_unreachable_majority_timeout=60
+
+# Multi-thread slave applier
+slave_parallel_workers=4
+slave_parallel_type=LOGICAL_CLOCK
+slave_preserve_commit_order=1

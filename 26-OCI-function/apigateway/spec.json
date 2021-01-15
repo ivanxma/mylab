@@ -1,0 +1,15 @@
+{
+ "routes": [
+  {
+   "path": "/getuser",
+   "methods": [
+    "GET"
+   ],
+   "backend": {
+    "type": "ORACLE_FUNCTIONS_BACKEND",
+    "functionId": "ocid1.fnfunc.oc1.iad.aaaaaaaaacuhpik6ggyuiulrc4fijyv675hjm7wrg3qnflbncbbipno5j52q"
+   }
+
+  }
+ ]
+}

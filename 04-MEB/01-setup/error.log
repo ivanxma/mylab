@@ -1,0 +1,3 @@
+2018-06-19T16:12:14.225520Z 0 [System] [MY-013169] [Server] /opt/mysql-commercial-8.0.11-linux-glibc2.12-x86_64/bin/mysqld (mysqld 8.0.11-commercial) initializing of server in progress as process 1048
+2018-06-19T16:12:17.477493Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: !uCg+:qhf0>l
+2018-06-19T16:12:18.738124Z 0 [System] [MY-013170] [Server] /opt/mysql-commercial-8.0.11-linux-glibc2.12-x86_64/bin/mysqld (mysqld 8.0.11-commercial) initializing of server has completed

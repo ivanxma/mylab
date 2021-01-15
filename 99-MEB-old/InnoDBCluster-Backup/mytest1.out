@@ -1,0 +1,3 @@
+2019-05-23T03:25:22.593769Z mysqld_safe Logging to '/home/mysql/data/04-restore/mysqld.error'.
+2019-05-23T03:25:22.651932Z mysqld_safe Starting mysqld daemon with databases from /home/mysql/data/04-restore
+2

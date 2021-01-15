@@ -1,0 +1,1 @@
+../1-Replication/05-showReplicationStatus.sh

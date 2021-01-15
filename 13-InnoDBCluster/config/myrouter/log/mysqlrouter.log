@@ -1,0 +1,21 @@
+2020-12-03 06:47:17 http_server INFO [7f03b7035880] listening on 0.0.0.0:8443
+2020-12-03 06:47:17 io INFO [7f03b7035880] starting 2 io-threads, using backend 'linux_epoll'
+2020-12-03 06:47:17 metadata_cache INFO [7f03b0ab7700] Starting Metadata Cache
+2020-12-03 06:47:17 metadata_cache INFO [7f03b0ab7700] Connections using ssl_mode 'PREFERRED'
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700] Starting metadata cache refresh thread
+2020-12-03 06:47:17 routing INFO [7f03917fa700] [routing:mycluster_ro] started: listening on 0.0.0.0:6447, routing strategy = round-robin-with-fallback
+2020-12-03 06:47:17 routing WARNING [7f0390ff9700] [routing:mycluster_rw] setup_tcp_service() error from bind(): Address already in use
+2020-12-03 06:47:17 routing ERROR [7f0390ff9700] routing:mycluster_rw: Setting up TCP service using 0.0.0.0:6446: Address already in use
+2020-12-03 06:47:17 main ERROR [7f0390ff9700]   plugin 'routing:mycluster_rw' start failed: routing:mycluster_rw: Setting up TCP service using 0.0.0.0:6446: Address already in use
+2020-12-03 06:47:17 routing INFO [7f036bfff700] [routing:mycluster_x_ro] started: listening on 0.0.0.0:64470, routing strategy = round-robin-with-fallback
+2020-12-03 06:47:17 routing INFO [7f036b7fe700] [routing:mycluster_x_rw] started: listening on 0.0.0.0:64460, routing strategy = first-available
+2020-12-03 06:47:17 routing INFO [7f036b7fe700] [routing:mycluster_x_rw] stopped
+2020-12-03 06:47:17 routing INFO [7f03917fa700] [routing:mycluster_ro] stopped
+2020-12-03 06:47:17 routing INFO [7f036bfff700] [routing:mycluster_x_ro] stopped
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700] Potential changes detected in cluster 'mycluster' after metadata refresh
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700] Metadata for cluster 'mycluster' has 1 replicasets:
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700] 'default' (3 members, single-primary)
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700]     ivanma-demo1:3310 / 33100 - mode=RW 
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700]     ivanma-demo1:3320 / 33200 - mode=RO 
+2020-12-03 06:47:17 metadata_cache INFO [7f03b02b6700]     ivanma-demo1:3330 / 33300 - mode=RO 
+2020-12-03 06:47:17 main ERROR [7f03b7035880] Error: routing:mycluster_rw: Setting up TCP service using 0.0.0.0:6446: Address already in use

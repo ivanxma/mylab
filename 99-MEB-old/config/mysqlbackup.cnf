@@ -1,0 +1,16 @@
+[mysqlbackup]
+backup-dir=/home/mysql/backup/full/mybackup
+#with-timestamp
+backup-image=/home/mysql/backup/full/mybackup/myimage.img
+incremental-backup-dir=/home/mysql/backup/inc
+
+[mysqld]
+datadir=/home/mysql/data/07
+basedir=/usr/local/mysql
+port=3306
+socket=/home/mysql/data/07/mysqld.sock
+character-set-server=utf8mb4
+log-error=/home/mysql/data/07/mysqld.error
+sql-mode=NO_ENGINE_SUBSTITUTION,ONLY_FULL_GROUP_BY,NO_AUTO_CREATE_USER
+explicit_defaults_for_timestamp
+
