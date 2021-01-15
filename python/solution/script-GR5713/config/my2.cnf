@@ -1,0 +1,18 @@
+[mysqld]
+datadir=/home/mysql/data2
+basedir=/usr
+port=3316
+socket=/home/mysql/data2/my.sock
+log-bin
+binlog-format=row
+binlog-checksum=NONE
+server-id=102
+# enable gtid
+gtid-mode=on
+enforce-gtid-consistency=true
+log-slave-updates=true
+# Table based repositories
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+# Extraction Algorithm
+transaction-write-set-extraction=MURMUR32

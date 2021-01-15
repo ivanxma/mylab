@@ -1,0 +1,208 @@
+doctype html
+html
+  head
+    title  Databas Access Count
+    meta(charset="UTF-8")
+    meta(http-equiv="refresh" content="30")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="stylesheet" href="stylesheets/main.css")
+
+  body
+    p=new Date()
+    nav#navbar-default
+      div.container-fluid
+        h1.navbar-header Database Access Count
+    div.row
+       div.col-xs-12
+         canvas(id="myChart1" width="10" height="150")
+    hr
+    div.row
+       div.col-xs-12
+         canvas(id="myChart2" width="10" height="150")
+    hr
+    div.row
+       div.col-xs-12
+         canvas(id="myChart3" width="10" height="150")
+    hr
+    div.row
+       div.col-xs-12
+         canvas(id="myChart4" width="10" height="150")
+    hr
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js")
+    script.
+
+       var colorSchema = [
+            "#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", 
+            "#c45850", "#2d12d5", "#55f3da", "#fa22cd", 
+            "#15ddab", "#7dff1a"
+            ];
+       var ctx = document.getElementById('myChart1');
+       var stars = [ #{y} ];
+       var frameworks = [ #{x} ];
+
+       
+       var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+           labels: frameworks,
+           datasets: [{
+               label: 'counts',
+               backgroundColor: colorSchema,
+               data: stars
+           }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          title: { 
+            display: true,
+            text: 'Hostname : #{hostname[0]} Insertion Rate count/min'
+          },
+
+          legent: {
+            display: true,
+            labels: {
+              fontColor: 'rgb(255, 99, 132)'
+            }
+          },
+
+          scales: {
+            yAxes: [{
+              ticks:{
+                min: 0
+              }
+            }]
+          }
+        }
+       })
+
+       var ctx2 = document.getElementById('myChart2');
+       var stars2 = [ #{y2} ];
+       var frameworks2 = [ #{x2} ];
+
+       
+       var myChart = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+           labels: frameworks2,
+           datasets: [{
+               label: 'counts',
+               backgroundColor: colorSchema,
+               data: stars2
+           }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          title: { 
+            display: true,
+            text: 'Hostname : #{hostname[1]} Insertion Rate count/min'
+          },
+
+          legent: {
+            display: true,
+            labels: {
+              fontColor: 'rgb(255, 99, 132)'
+            }
+          },
+
+          scales: {
+            yAxes: [{
+              ticks:{
+                min: 0
+              }
+            }]
+          }
+        }
+       })
+
+
+       var ctx3 = document.getElementById('myChart3');
+       var stars3 = [ #{y3} ];
+       var frameworks3 = [ #{x3} ];
+
+       
+       var myChart = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+           labels: frameworks3,
+           datasets: [{
+               label: 'counts',
+               backgroundColor: colorSchema,
+               data: stars3
+           }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          title: { 
+            display: true,
+            text: 'Hostname : #{hostname[2]} Insertion Rate count/min'
+          },
+
+          legent: {
+            display: true,
+            labels: {
+              fontColor: 'rgb(255, 99, 132)'
+            }
+          },
+
+          scales: {
+            yAxes: [{
+              ticks:{
+                min: 0
+              }
+            }]
+          }
+        }
+       })
+
+       var ctx4 = document.getElementById('myChart4');
+       var stars4 = [ #{y4} ];
+       var frameworks4 = [ #{x4} ];
+
+       
+       var myChart = new Chart(ctx4, {
+        type: 'line',
+        data: {
+           labels: frameworks4,
+           datasets: [{
+               label: 'counts',
+               backgroundColor: colorSchema,
+               data: stars4
+           }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          title: { 
+            display: true,
+            text: 'Via Router - Hostname : #{hostname[3]} Insertion Rate count/min'
+          },
+
+          legent: {
+            display: true,
+            labels: {
+              fontColor: 'rgb(255, 128, 132)'
+            }
+          },
+
+          scales: {
+            yAxes: [{
+              ticks:{
+                min: 0
+              }
+            }]
+          }
+        }
+       })
+
+
+    ul 
+    each item in x
+      li=item
+    each item in y
+      li=item
+
+

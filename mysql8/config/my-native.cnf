@@ -1,0 +1,7 @@
+[mysqld]
+datadir=/home/mysql/data/mysql8
+basedir=/usr/local/mysql
+socket=/home/mysql/data/mysql8/mysqld.socket
+port=3306
+log_error=/home/mysql/data/mysql8/mysqld.error
+default-authentication-plugin=mysql_native_password

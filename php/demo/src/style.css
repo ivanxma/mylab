@@ -1,0 +1,55 @@
+body {
+	/* Will now allow any scrolling controls on the page. Some content might be hidden then! */
+	overflow: hidden;
+}
+
+.header {
+	/* Bit of Gray shade. Looks nice */
+	background-color: #f1f2f7;
+}
+
+.pageFooter {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	background-color: #778899;
+}
+
+.stat-icon.dib > i {
+	/* The header widgets makes them smaller so they can all fit */
+	font-size: 0.8em;
+}
+
+.stat-widget-one .stat-digit {
+	/* The header widgets makes them smaller so they can all fit */
+	font-size: 0.8em;
+}
+
+.table {
+	/* The live log table needs to be small so all fit in one row. Otherwise it's ugly. */
+	font-size: 0.7em;
+	line-height: 0px;
+}
+
+.card {
+	/* Make sure no single windows (log or graphs) overflows even if it's too big */
+	overflow: hidden;
+}
+
+.switch.switch-text .switch-label {
+	/* This is the worker on/off switch background  */
+	background-color: #bd2130;
+}
+
+.card-header {
+	/* Set size of small windows header. Needed this to allow for number of transactions text fit above the graphs, and make sure the graphs are rendered in the right size */
+	height: 70px;
+}
+
+.serverGraphTextNoOfTransactions {
+	/* The text of the number of transactions above the servers graphs */
+	font-size: 0.8em;
+}

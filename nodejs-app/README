@@ -1,0 +1,10 @@
+install nodejs generator "express"
+install nodemon if needed
+
+Create InnoDB Cluster - running at 3310, 3320, 3330
+portx on 33100, 33200, 33300
+
+Create MySQL Router for InnoDB Cluster
+6446 on SQL port
+64460 on portx
+

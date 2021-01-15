@@ -1,0 +1,4 @@
+from scratch
+ADD my.tar.gz /
+VOLUME /tmp
+CMD ["/myinit/mystartmysql.sh"]

@@ -1,0 +1,62 @@
+chmod 777 /tmp/; mv /opt/packages/mcm/ /opt/; groupadd clustermanager; useradd -M -d /opt/mcm/ -g clustermanager clustermanager; chown -R clustermanager:clustermanager /opt/mcm/
+sed -i 's/\$HOME\/bin/\$HOME\/bin\:\/opt\/mcm\/cluster7.6.6\/bin\/:\/opt\/mcm\/mcm1.4.6\/bin\//' /root/.bash_profile
+
+. /root/.bash_profile
+
+sudo -u clustermanager /opt/mcm/mcm1.4.6/bin/mcmd &
+
+rpm -ihv /opt/packages/router/*.rpm
+
+-----
+mcm
+create site --hosts=10.0.10.10,10.0.10.11,10.0.10.12,10.0.10.13 mysite;
+add package --basedir=/opt/mcm/cluster7.6.6 7.6.6;
+
+create cluster --package=7.6.6 --processhosts=ndb_mgmd@10.0.10.10,ndb_mgmd@10.0.10.11,ndbmtd@10.0.10.12,ndbmtd@10.0.10.13,mysqld@10.0.10.10,mysqld@10.0.10.11,ndbapi@* cl;
+
+set sql_mode:mysqld="NO_ENGINE_SUBSTITUTION", port:mysqld:52=3307, max_connect_errors:mysqld=99999, StopOnError:ndbmtd=false, default_storage_engine:mysqld=ndb cl;
+
+---
+MySQLClusterStatus
+---
+
+start cluster cl;
+quit
+mysql -h127.0.0.1 -uroot < /opt/mcm/cluster7.6.6/share/ndb_dist_priv.sql
+mysql -h127.0.0.1 -uroot -e "CALL mysql.mysql_cluster_move_privileges();"
+
+mcm -e "stop process 51 cl; start process 51 cl; stop process 52 cl; start process 52 cl;"
+
+mysql -h127.0.0.1 -e "create user root@'%' identified by ''; grant all privileges on *.* to root@'%' with grant option;"
+
+cat << EOF > /etc/mysqlrouter/mysqlrouter.conf
+[routing:round_rubin]
+bind_address = 0.0.0.0:6446
+destinations = 10.0.10.10:3306,10.0.10.11:3307
+routing_strategy=round-robin
+EOF
+
+service mysqlrouter start
+
+-----
+
+ssh 10.0.10.13
+sudo -u clustermanager /opt/mcm/mcm1.4.6/bin/mcmd &
+exit
+
+-----
+mcm
+add process -R ndbmtd@10.0.10.12,ndbmtd@10.0.10.13,mysqld@10.0.10.11 cl;
+start process --added cl;
+quit
+
+mysql  -h 10.0.10.11 -uroot -e "ALTER TABLE demo.names REORGANIZE PARTITION;"
+mysql  -h 10.0.10.11 -uroot -e "ALTER TABLE demo.transactions REORGANIZE PARTITION;"
+mysql  -h 10.0.10.11 -uroot -e "ALTER TABLE demo.users REORGANIZE PARTITION;"
+mysql  -h 10.0.10.11 -uroot -e "optimize table demo.names;"
+mysql  -h 10.0.10.11 -uroot -e "optimize table demo.transactions;"
+mysql  -h 10.0.10.11 -uroot -e "optimize table demo.users;"
+
+
+sed -i 's/destinations = 10.0.10.10:3306,10.0.10.11:3307/destinations = 10.0.10.10:3306,10.0.10.11:3307,10.0.10.11:3306/' /etc/mysqlrouter/mysqlrouter.conf
+service mysqlrouter restart

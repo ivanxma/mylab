@@ -1,0 +1,26 @@
+[mysqld]
+datadir=/home/mysql/data2
+basedir=/usr
+port=3316
+socket=/home/mysql/data2/my.sock
+log-bin
+binlog-format=row
+binlog-checksum=NONE
+server-id=102
+# enable gtid
+gtid-mode=on
+enforce-gtid-consistency=true
+log-slave-updates=true
+# Table based repositories
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+# Extraction Algorithm
+transaction-write-set-extraction=MURMUR32
+plugin-load=group_replication.so
+group_replication_group_name=8a94f357-aab4-11df-86ab-c80aa9429562
+group_replication_recovery_retry_count=2
+group_replication_recovery_reconnect_interval=120
+group_replication_local_address=primary:4316
+group_replication_peer_addresses=primary:4306,primary:4316
+group_replication_bootstrap_group=0
+group_replication_start_on_boot=0

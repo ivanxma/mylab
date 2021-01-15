@@ -1,0 +1,47 @@
+useradd -g users workshop
+
+su - workshop
+
+mysqlsh
+dbPass = '';
+dba.deploySandboxInstance(3310, {password: dbPass});
+dba.deploySandboxInstance(3320, {password: dbPass});
+dba.deploySandboxInstance(3330, {password: dbPass});
+dba.deploySandboxInstance(3340, {password: dbPass});
+
+\q
+
+for port in 3310 3320 3330 3340; do
+	echo "Resetting password for server on port $port"
+	mysql -h 127.0.0.1 -P $port -e "SET SQL_LOG_BIN=0; alter user root@'localhost' identified with mysql_native_password as ''; alter user root@'%' identified with mysql_native_password as ''; SET SQL_LOG_BIN=1;"
+done
+
+mysqlsh
+dbPass = '';
+shell.connect('root@localhost:3310', dbPass);
+var cluster = dba.createCluster("cl", {multiMaster: false});
+cluster.addInstance({user: "root", host: "localhost", port: 3320, password: dbPass});
+cluster.addInstance({user: "root", host: "localhost", port: 3330, password: dbPass});
+cluster.status();
+\q
+
+mysqlrouter --bootstrap localhost:3310 --directory cl
+
+cl/start.sh 
+
+------
+
+mysqlsh
+dba.stopSandboxInstance(3310)
+
+dba.startSandboxInstance(3310)
+\q
+
+-----
+
+mysqlsh
+dbPass = '';
+shell.connect('root@localhost:3320', dbPass);
+var cluster = dba.getCluster('cl');
+cluster.addInstance({user: "root", host: "localhost", port: 3340, password: dbPass});
+cluster.status();

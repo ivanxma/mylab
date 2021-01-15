@@ -1,0 +1,27 @@
+
+# install OSB
+# 	Download OSB installation package
+#	untar the package to folder (e.g. /tmp/osb-install
+# create folder /usr/local/oracle/backup
+#	sudo mkdir -p /usr/local/oracle/backup
+#	root#cd /usr/local/oracle/backup;/tmp/osb-install/setup
+#	# setup with admin user/password
+#	# setup with admin and client
+#
+# Web Interface opened
+#	https://<ip>
+#	login
+#
+# configure host with media server
+#	obtool> lshost
+#	# should be able to see host (hostname) with admin and client role
+#	# add mediaserver to the host
+#	obtool> chhost --addrole mediaserver <hostname>
+#
+# configure disk device
+#	#mkdev --type disk --attach testdrive-ivanma:/root/mypool/pool01 mypool01
+#	#lsdev -l
+
+
+
+	

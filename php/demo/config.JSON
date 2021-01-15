@@ -1,0 +1,128 @@
+{
+  "config": [
+    {
+      "description": "Single server: Performance Schema",
+      "servers": [
+        {
+          "ip": "127.0.0.1",
+          "port": "3306"
+        }
+      ],
+      "router": {
+        "ip": "127.0.0.1",
+        "write": 3306,
+        "read": 3306
+      }
+    },
+    {
+      "description": "Multi Master InnoDB Cluster",
+      "servers": [
+        {
+          "ip": "127.0.0.1",
+          "port": 3310
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3320
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3330
+        }
+      ],
+      "router": {
+        "ip": "127.0.0.1",
+        "write": 6446,
+        "read": 6446
+      }
+    },
+    {
+      "description": "Single Primary InnoDB Cluster",
+      "servers": [
+        {
+          "ip": "127.0.0.1",
+          "port": 3310
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3320
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3330
+        }
+      ],
+      "router": {
+        "ip": "127.0.0.1",
+        "write": 6446,
+        "read": 6447
+      }
+    },
+    {
+      "description": "Single Primary InnoDB Cluster Extended",
+      "servers": [
+        {
+          "ip": "127.0.0.1",
+          "port": 3310
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3320
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3330
+        },
+        {
+          "ip": "127.0.0.1",
+          "port": 3340
+        }
+      ],
+      "router": {
+        "ip": "127.0.0.1",
+        "write": 6446,
+        "read": 6447
+      }
+    },
+    {
+      "description": "MySQL Cluster (NDB)",
+      "servers": [
+        {
+          "ip": "CL01.local",
+          "port": 3306
+        },
+        {
+          "ip": "CL02.local",
+          "port": 3307
+        }
+      ],
+      "router": {
+        "ip": "127.0.0.1",
+        "write": 6446,
+        "read": 6446
+      }
+    },
+    {
+      "description": "MySQL Cluster (NDB) Extended",
+      "servers": [
+        {
+          "ip": "CL01.local",
+          "port": 3306
+        },
+        {
+          "ip": "CL02.local",
+          "port": 3307
+        },
+        {
+          "ip": "CL02.local",
+          "port": 3306
+        }
+      ],
+      "router": {
+        "ip": "127.0.0.1",
+        "write": 6446,
+        "read": 6446
+      }
+    }
+  ]
+}
