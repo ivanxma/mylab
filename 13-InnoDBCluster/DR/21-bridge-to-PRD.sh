@@ -20,15 +20,15 @@ EOF
 
 mysql -ugradmin -pgrpass -h$CLUSTER_HOST -P3310   << EOF
 
-CHANGE MASTER TO
+CHANGE REPLICATION SOURCE TO
   master_host = '$BRIDGE_HOST',
   master_port = 3306,
   master_user = 'repl',
   master_password = 'repl',
   master_auto_position=1,
   SOURCE_CONNECTION_AUTO_FAILOVER=1,
-  MASTER_RETRY_COUNT=3,
-  MASTER_CONNECT_RETRY=5
+  SOURCE_RETRY_COUNT=3,
+  SOURCE_CONNECT_RETRY=5
 FOR CHANNEL '$BRIDGE_CHANNEL';
 
 

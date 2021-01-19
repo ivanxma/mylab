@@ -38,3 +38,8 @@ export SECONDARY_HOST=ivanma-demo3
 - to create 2 servers (3306, 3316)
 -  3306 pointing to Primary Node of the Cluster
 -  3316 pointing to Secondary Node of the Cluster
+
+## DR
+- This is the Setup of DR (Cluster2) to bridge server(s)
+- Cluster as 3340,3350,3360
+
