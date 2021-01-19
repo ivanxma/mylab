@@ -4,12 +4,13 @@
 
 1. remove the config/gencnf.touch
 2. Change the following according to the environment
-' export BRIDGE_HOST=instance-20210119-1947
-' export BRIDGE_CHANNEL=channel1
-' export BRIDGE_DRCHANNEL=drchannel1
-' export CLUSTER_HOST=instance-20210119-1947
-' export CLUSTER_IPALLOWLIST=10.0.0.0/16
-' export SECONDARY_HOST=ivanma-demo3
+` export BRIDGE_HOST=instance-20210119-1947
+ export BRIDGE_CHANNEL=channel1
+ export BRIDGE_DRCHANNEL=drchannel1
+ export CLUSTER_HOST=instance-20210119-1947
+ export CLUSTER_IPALLOWLIST=10.0.0.0/16
+ export SECONDARY_HOST=ivanma-demo3
+ `
 
 
 ## 01-firsttest
@@ -17,6 +18,6 @@
 ' it also creates the replication user 'repl@%' with privilege assigned (clone, replication_client, backup_admin, SELECT).
 
 ## 06-bridgeserver
-' to create 2 servers (3306, 3316)
+` to create 2 servers (3306, 3316)`
 '' 3306 pointing to Primary Node of the Cluster
 '' 3316 pointing to Secondary Node of the Cluster
