@@ -23,7 +23,7 @@ relay-log-info-repository=TABLE
 
 # Extraction Algorithm
 transaction-write-set-extraction=XXHASH64
-report-host=ivanma-demo1
+report-host=instance-20210119-1947
 
 
 # skip start slave

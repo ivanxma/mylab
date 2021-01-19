@@ -23,7 +23,7 @@ relay-log-info-repository=TABLE
 
 # Extraction Algorithm
 transaction-write-set-extraction=XXHASH64
-report-host=ivanma-demo2
+report-host=instance-20210119-1947
 
 # replication filter
 replicate-ignore-db=channel1:mysql_innodb_cluster_metadata
