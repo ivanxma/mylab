@@ -1,23 +1,21 @@
 . ./comm.sh
 
-mysql -uroot -h127.0.0.1 -P3306 << EOF
-set sql_log_bin=0;
-SELECT asynchronous_connection_failover_delete_source('$BRIDGE_CHANNEL', '$CLUSTER_HOST', 3310, '');
-SELECT asynchronous_connection_failover_delete_source('$BRIDGE_CHANNEL', '$CLUSTER_HOST', 3320, '');
-SELECT asynchronous_connection_failover_delete_source('$BRIDGE_CHANNEL', '$CLUSTER_HOST', 3330, '');
+mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 << EOL
 
-SELECT * FROM performance_schema.replication_asynchronous_connection_failover;
+var v = session.runSql('select @@group_replication_group_name;').fetchAll();
+var gname = v[0][0];
 
+print("Group Replication Grouop Name : " + gname + "\n");
 
-EOF
+var sess3306 = shell.connect("root:@127.0.0.1:3306")
+sess3306.runSql(" set global super_read_only=0; ")
+sess3306.runSql(" set sql_log_bin=0; ")
+sess3306.runSql(" SELECT asynchronous_connection_failover_delete_managed('$BRIDGE_CHANNEL', '" + gname + "');")
+sess3306.close();
+var sess3316 = shell.connect("root:@127.0.0.1:3316")
+sess3316.runSql(" set global super_read_only=0; ")
+sess3316.runSql(" set sql_log_bin=0; ")
+sess3316.runSql(" SELECT asynchronous_connection_failover_delete_managed('$BRIDGE_CHANNEL', '" + gname + "');")
+sess3316.close();
 
-mysql -uroot -h127.0.0.1 -P3316 << EOF
-set sql_log_bin=0;
-SELECT asynchronous_connection_failover_delete_source('$BRIDGE_CHANNEL', '$CLUSTER_HOST', 3310, '');
-SELECT asynchronous_connection_failover_delete_source('$BRIDGE_CHANNEL', '$CLUSTER_HOST', 3320, '');
-SELECT asynchronous_connection_failover_delete_source('$BRIDGE_CHANNEL', '$CLUSTER_HOST', 3330, '');
-
-SELECT * FROM performance_schema.replication_asynchronous_connection_failover;
-
-
-EOF
+EOL
