@@ -23,7 +23,7 @@ relay-log-info-repository=TABLE
 
 # Extraction Algorithm
 transaction-write-set-extraction=XXHASH64
-report-host=instance-20210119-1947
+report-host=test01
 
 # replication filter - must be commented for setup
 #replicate-ignore-db=channel1:mysql_innodb_cluster_metadata
