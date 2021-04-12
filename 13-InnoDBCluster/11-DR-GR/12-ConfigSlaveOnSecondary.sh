@@ -6,17 +6,17 @@
 
 mysql -uroot -h127.0.0.1 -P3340  << EOF
 
-CHANGE MASTER TO
-  master_host = '$PRIMARY',
-  master_port = 3310,
-  master_user = 'repl',
-  master_password = 'repl',
-  master_auto_position=1
+CHANGE REPLICATION SOURCE TO
+  source_host = '$PRIMARY',
+  source_port = 3310,
+  source_user = 'repl',
+  source_password = 'repl',
+  source_auto_position=1
 FOR CHANNEL 'channel1';
 
 
 -- set persist super_read_only=1;
-SHOW SLAVE STATUS FOR CHANNEL 'channel1'\G
+SHOW REPLICA STATUS FOR CHANNEL 'channel1'\G
 
 
 
