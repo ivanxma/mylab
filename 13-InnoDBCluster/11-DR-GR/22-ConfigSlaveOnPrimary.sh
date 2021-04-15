@@ -11,7 +11,8 @@ CHANGE REPLICATION SOURCE TO
   source_port = 3340,
   source_user = 'repl',
   source_password = 'repl',
-  source_auto_position=1
+  source_auto_position=1,
+  source_ssl=1
 FOR CHANNEL 'channel1';
 
 
