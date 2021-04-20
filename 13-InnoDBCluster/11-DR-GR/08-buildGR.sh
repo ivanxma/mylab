@@ -26,6 +26,9 @@ q3b=c3.runSql('set persist group_replication_group_seeds="$SECONDARY:13340,$SECO
 q3c=c3.runSql('set persist group_replication_local_address="$SECONDARY:13360"')
 q3d=c3.runSql('set persist group_replication_start_on_boot=on')
 
+c1.close()
+c2.close()
+c3.close()
 
 
 
