@@ -31,6 +31,8 @@ set Arbitration:ndbmtd=waitexternal mycluster1;
 set Arbitration:ndbmtd=waitexternal mycluster2;
 set port:mysqld=3316 mycluster1;
 set port:mysqld=3316 mycluster2;
+set ndb-log-update-as-write:mysqld=off,ndb-log-bin:mysqld=on mycluster1;
+set ndb-log-update-as-write:mysqld=off,ndb-log-bin:mysqld=on mycluster2;
 
 get Arbitration:ndbmtd,MaxNoOfConcurrentOperations:ndbmtd mycluster1;
 get Arbitration:ndbmtd,MaxNoOfConcurrentOperations:ndbmtd mycluster2;
