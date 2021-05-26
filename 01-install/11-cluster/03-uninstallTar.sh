@@ -1,6 +1,6 @@
-NDBFOLDER=/opt/mysql-cluster-commercial-8.0.22-el7-x86_64
+NDBFOLDER=/opt/mysql-cluster-commercial-8.0.25-el7-x86_64
 NDBLINK=/home/mysql/mcm/cluster-latest
-NDBTAR=/opt/download/mysql/ndb/mysql-cluster-commercial-8.0.22-el7-x86_64.tar.gz
+NDBTAR=/opt/download/mysql/ndb/mysql-cluster-commercial-8.0.25-el7-x86_64.tar.gz
 
 if [ $USER != 'root' ]
 then

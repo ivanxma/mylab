@@ -1,6 +1,6 @@
-NDBFOLDER=/usr/local/mysql-cluster-commercial-8.0.23-linux-glibc2.12-x86_64
+NDBFOLDER=/usr/local/mysql-cluster-commercial-8.0.25-linux-glibc2.12-x86_64
 NDBLINK=/home/mysql/mcm/cluster-latest
-NDBTAR=/workshop/linux/ndb/mysql-cluster-commercial-8.0.23-linux-glibc2.12-x86_64.tar.gz
+NDBTAR=/workshop/linux/ndb/mysql-cluster-commercial-8.0.25-linux-glibc2.12-x86_64.tar.gz
 
 
 
