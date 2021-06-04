@@ -5,10 +5,7 @@ select "BEFORE", count(*) from backup_history;
 select "BEFORE", count(*) from backup_progress;
 
 insert into backup_history
-select 0,* from backup_history_oldcopy;
-
-insert into backup_progress  (backup_id, tool_name, error_code, error_message, `current_time`, current_state) 
-select * from backup_progress_newcopy;
+select *,0 from backup_history_oldcopy;
 
 select "AFTER", count(*) from backup_history;
 select "AFTER", count(*) from backup_progress;
@@ -21,9 +18,9 @@ read
 
 mysql -uroot -h127.0.0.1 -P3310 << EOF
 use mysql;
-drop table backup_history_oldcopy;
-drop table backup_progress_oldcopy;
-drop table backup_progress_newcopy;;
+drop table if exists backup_history_oldcopy;
+drop table if exists backup_progress_oldcopy;
+drop table if exists backup_progress_newcopy;;
 
 show tables like 'backup%';
 

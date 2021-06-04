@@ -7,14 +7,8 @@ mysql -uroot -h127.0.0.1 -P3310 << EOF
 
 use mysql;
 
-set sql_log_bin=1;
 rename table backup_history to backup_history_oldcopy;
-
-set sql_log_bin=0;
-create table backup_progress_newcopy like backup_progress;
 rename table backup_progress to backup_progress_oldcopy;
-insert into backup_progress_newcopy (backup_id, tool_name, error_code, error_message, `current_time`, current_state) 
-select * from backup_progress_oldcopy;
 
 show tables like 'backup%';
 
