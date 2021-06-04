@@ -1,0 +1,11 @@
+{
+    "metadata-cache": {
+        "group-replication-id": "7dedfd2d-bf93-11eb-9f30-020017044939",
+        "cluster-metadata-servers": [
+            "mysql://mysql8025-image:3310",
+            "mysql://mysql8025-image:3320",
+            "mysql://mysql8025-image:3330"
+        ]
+    },
+    "version": "1.0.0"
+}

@@ -1,0 +1,35 @@
+[mysqld]
+datadir=/home/mysql/data/3330
+basedir=/usr/local/mysql8025
+log-error=/home/mysql/data/3330/my.error
+port=3330
+socket=/home/mysql/data/3330/my.sock
+mysqlx-port=33300
+mysqlx-socket=/home/mysql/data/3330/myx.sock
+log-bin=logbin
+relay-log=logrelay
+binlog-format=row
+binlog-checksum=NONE
+server-id=103
+
+# enable gtid
+gtid-mode=on
+enforce-gtid-consistency=true
+log-slave-updates=true
+
+# Table based repositories
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+
+# Extraction Algorithm
+transaction-write-set-extraction=XXHASH64
+report-host=mysql8025-image
+
+# skip start slave
+skip-slave-start=1
+
+# parallel slave
+slave_parallel_type=LOGICAL_CLOCK
+slave_parallel_workers=2
+slave_preserve_commit_order=1
+binlog_transaction_dependency_tracking=WRITESET
