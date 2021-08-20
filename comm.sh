@@ -10,6 +10,8 @@ export BRIDGE_DRCHANNEL=drchannel1
 export CLUSTER_HOST=$HOSTNAME
 export CLUSTER_IPALLOWLIST=10.0.0.0/16
 export SECONDARY_HOST=$HOSTNAME
+export PRIMARY_HOST=$HOSTNAME
+
 
 if [ ! -r config/gencnf.touch ]
 then
