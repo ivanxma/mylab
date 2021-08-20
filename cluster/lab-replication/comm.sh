@@ -8,6 +8,6 @@ then
 else
 	MYPORT=""
 fi
-export PRIMARY=primary
-export SECONDARY=secondary
+export PRIMARY=$HOSTNAME
+export SECONDARY=$HOSTNAME
 export MYPORT
