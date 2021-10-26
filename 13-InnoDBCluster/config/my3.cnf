@@ -23,7 +23,7 @@ relay-log-info-repository=TABLE
 
 # Extraction Algorithm
 transaction-write-set-extraction=XXHASH64
-report-host=test01
+report-host=workshop47
 
 # skip start slave
 skip-slave-start=1

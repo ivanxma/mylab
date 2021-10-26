@@ -47,7 +47,7 @@ echo "finished - Remvoing Cluster member $SECONDARY_HOST:3340/3350/3360"
 
 mysqlsh --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
 
-var x = dba.createCluster('mycluster', {exitStateAction:'OFFLINE_MODE',
+var x = dba.createCluster('mycluster2', {exitStateAction:'OFFLINE_MODE',
 	consistency:'BEFORE_ON_PRIMARY_FAILOVER',
 	expelTimeout:30,
 	memberSslMode:'REQUIRED',
