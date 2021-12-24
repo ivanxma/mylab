@@ -61,7 +61,7 @@ def __returnSecEngineTables(session, schema):
         return False
     tablearray = []
     for row in tables:
-        tablearray.append( row[1] )
+        tablearray.append( row[0] + "." + row[1] )
 
     return tablearray;
 
@@ -86,7 +86,7 @@ def __returnSecLoadedTables(session, schema):
         return False
     tablearray = []
     for row in tables:
-        tablearray.append( row[1] )
+        tablearray.append( row[0] + "." + row[1] )
 
     return tablearray;
 
@@ -112,16 +112,12 @@ def list_sec_loaded_tables(schema=None, session=None):
                   "function or connect the shell to a database")
             return
 
-    if schema is None:
-        print("No schema specified.")
-        return
-
     if __isHeatWavePlugin(session) is False:
         print("No HeatWave Plugin")
         return
 
     if __isHeatWaveOnline(session) :
-        db = session.get_schema(schema)
+        # db = session.get_schema(schema)
         tables = __returnSecLoadedTables(session, schema)
         return tables;
 
