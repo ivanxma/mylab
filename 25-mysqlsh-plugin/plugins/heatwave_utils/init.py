@@ -144,15 +144,12 @@ def list_sec_engine_tables(schema=None, session=None):
                   "function or connect the shell to a database")
             return
 
-    if schema is None:
-        print("No schema specified.")
-        return
-	
     if __isHeatWavePlugin(session) is False:
         print("No HeatWave Plugin")
         return
+
     if __isHeatWaveOnline(session) :
-        db = session.get_schema(schema)
+        #db = session.get_schema(schema)
         tables = __returnSecEngineTables(session, schema)
         return tables;
     return
