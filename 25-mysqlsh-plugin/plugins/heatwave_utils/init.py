@@ -1,12 +1,13 @@
 from mysqlsh.plugin_manager import plugin, plugin_function
 from heatwave_utils.comm import __isHeatWaveOnline, __isHeatWavePlugin
+from heatwave_utils import comm
 
 @plugin
 class heatwave_utils:
     """
     Heatwave Utils 
 
-    A collection of utils to manage heatwavse
+    A collection of utils to manage heatwave
     """
 
 # internal function to execute SQL in the current session and return RESULTSET
@@ -301,6 +302,8 @@ def set_trace_on( session=None):
 
     result = __runAndReturn(session, "SET SESSION optimizer_trace='enabled=on';")
     result = __runAndReturn(session, "SET optimizer_trace_offset=-2;")
+
+    comm.mytrace=True
     shell.dump_rows(result)
 
     return
@@ -327,6 +330,7 @@ def set_trace_off( session=None):
             return
 
     result = __runAndReturn(session, "SET SESSION optimizer_trace='enabled=off';")
+    comm.mytrace=False
     shell.dump_rows(result)
 
     return
