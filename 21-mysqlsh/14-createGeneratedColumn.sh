@@ -8,6 +8,6 @@ alter table world_x.mytest01 add myweight varchar(30) as (doc->>"$.weight");
 alter table world_x.mytest01 add myheight varchar(30) as (doc->>"$.height");
 
 
-select -t myname, myage, myweight, myheight from world_x.mytest01;
+select  myname, myage, myweight, myheight from world_x.mytest01;
 
 EOL
