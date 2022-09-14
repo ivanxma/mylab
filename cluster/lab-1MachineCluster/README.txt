@@ -28,8 +28,8 @@ Commands Description
 Pre-requisite for the setup on 1 machines (or VMs)
 0. setup "mysql" account 
 1. Untar this folder to primary.    
-1. Installation of MCM (assuming 1.4.2)
-	/home/mysql/mcm/mcm1.4.2
+1. Installation of MCM (assuming 8.0.30)
+	/home/mysql/mcm/mcm8.0.30
 2. Installation of MySLQ Cluster
 	/home/mysql/mcm/cluster-latest
 3. setup /etc/hosts with 
