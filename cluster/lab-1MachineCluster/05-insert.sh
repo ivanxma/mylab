@@ -28,7 +28,9 @@ mysql  -uroot -h127.0.0.1 -P3316 << EOL2
 select * from test.mytable2 order by f1 desc limit 10;
 select count(*) from test.mytable2;
 show global status like 'ndb_pruned%';
-explain partitions select * from test.mytable2 where f1=20;
+
+-- explain partitions select * from test.mytable2 where f1=20;
+explain select * from test.mytable2 where f1=20\G
 select * from test.mytable2 where f1=20;
 show global status like 'ndb_pruned%';
 EOL2
