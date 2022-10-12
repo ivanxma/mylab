@@ -1,11 +1,11 @@
 #MCMNAME=mcm-1.4.8-linux-glibc2.12-x86-64bit
 #MCMNAME=mcm-8.0.26-linux-glibc2.12-x86-64bit
-MCMNAME=mcm-8.0.30-linux-el8-x86-64bit
+MCMNAME=mcm-8.0.31-linux-el8-x86-64bit
 MCMFOLDER=/usr/local/${MCMNAME}
 MCMLINK=/home/mysql/mcm/mcm-latest
 #MCMTAR=/workshop/linux/ndb/mcm/mcm-1.4.8-linux-glibc2.12-x86-64bit.tar.gz
 #MCMTAR=/workshop/linux/ndb/mcm/mcm-8.0.26-linux-glibc2.12-x86-64bit.tar.gz
-MCMTAR=/workshop/linux/ndb/mcm/mcm-8.0.30-linux-el8-x86-64bit.tar.gz
+MCMTAR=/workshop/linux/ndb/mcm/mcm-8.0.31-linux-el8-x86-64bit.tar.gz
 
 
 
@@ -26,8 +26,8 @@ fi
 
 if [ ! -h $MCMLINK ]
 then
-	mv $MCMFOLDER/mcm8.0.30 /home/mysql/mcm/
-	ln -s /home/mysql/mcm/mcm8.0.30 $MCMLINK
+	mv $MCMFOLDER/mcm8.0.31 /home/mysql/mcm/
+	ln -s /home/mysql/mcm/mcm8.0.31 $MCMLINK
 else
 	echo "$MCMLINK link already exists"
 fi
