@@ -1,6 +1,6 @@
 NDBFOLDER=/usr/local/mysql-cluster-commercial-8.0.31-linux-glibc2.12-x86_64
 NDBLINK=/home/mysql/mcm/cluster-latest
-NDBTAR=/workshop/linux/ndb/mysql-cluster-commercial-8.0.31-linux-glibc2.12-x86_64.tar.gz
+NDBTAR=/workshop/linux/ndb/mysql-cluster-commercial-8.0.31-linux-glibc2.12-x86_64.tar.xz
 
 
 
@@ -14,7 +14,7 @@ chown -R mysql:mysql /home/mysql/mcm
 
 if [ ! -d $NDBFOLDER ]
 then
-cd /usr/local;tar -zxvf $NDBTAR
+cd /usr/local;tar -xvf $NDBTAR
 else
 	echo "$NDBFOLDER already exists"
 fi
