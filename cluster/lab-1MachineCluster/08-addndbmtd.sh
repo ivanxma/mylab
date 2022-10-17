@@ -1,11 +1,11 @@
 . ./comm.sh
 
+mcm -e "stop cluster mycluster1;"
 mcm << EOL
 
-mcm -e "stop cluster mycluster1;"
 add process -R ndbmtd@$PRIMARY,ndbmtd@$PRIMARY mycluster1;
 
-set DataMemory:ndbmtd:3=60M,DataMemory:ndbmtd:4=60M mycluster1;
+set DataMemory:ndbmtd=60M mycluster1;
 set MaxNoOfConcurrentOperations:ndbmtd:3=100000,Arbitration:ndbmtd:3=waitexternal  mycluster1;
 set MaxNoOfConcurrentOperations:ndbmtd:4=100000,Arbitration:ndbmtd:4=waitexternal  mycluster1;
 EOL
