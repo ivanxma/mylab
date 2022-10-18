@@ -5,8 +5,10 @@ mcm << EOL
 add process -R ndbmtd@primary,ndbmtd@primary,ndbmtd@primary 
 mycluster1;
 
-set DataMemory:ndbmtd=60M:3,DataMemory:ndbmtd=60M mycluster1;
-set MaxNoOfConcurrentOperations:ndbmtd:3=100000,Arbitration:ndbmtd:4=waitexternal  mycluster1;
+set DataMemory:ndbmtd=60M mycluster1;
+set MaxNoOfConcurrentOperations:ndbmtd:4=100000,Arbitration:ndbmtd:4=waitexternal  mycluster1;
+set MaxNoOfConcurrentOperations:ndbmtd:5=100000,Arbitration:ndbmtd:5=waitexternal  mycluster1;
+set MaxNoOfConcurrentOperations:ndbmtd:6=100000,Arbitration:ndbmtd:6=waitexternal  mycluster1;
 EOL
 
 mcm -e "stop cluster mycluster1;"
