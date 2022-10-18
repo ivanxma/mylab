@@ -1,6 +1,6 @@
 The demo is written to create MySQL CLuster 'mycluster1' on 1 machines 
 
-A site(mysite) with 2 hosts will be created named 'primary' and 'secondary'.
+A site(mysite) with hosts will be created named 'primary'
 
 On primary host, 'mycluster1' is created with
 	
@@ -28,13 +28,12 @@ Commands Description
 Pre-requisite for the setup on 1 machines (or VMs)
 0. setup "mysql" account 
 1. Untar this folder to primary.    
-1. Installation of MCM (assuming 1.4.2)
-	/home/mysql/mcm/mcm1.4.2
+1. Installation of MCM (assuming 8.0.x)
+	/home/mysql/mcm/mcm8.0.x
 2. Installation of MySLQ Cluster
 	/home/mysql/mcm/cluster-latest
 3. setup /etc/hosts with 
 	<your primary ip>	primary
-	<your secondary ip>	secondary
 4. setup trusted user for mysql on both machine (primary and secondary)
 	- to allow ssh login for mysql user on both hosts without asking passwd
 5. Change the setting of comm.sh if necessary to point to the installation folder
