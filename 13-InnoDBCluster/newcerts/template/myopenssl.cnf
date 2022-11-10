@@ -1,0 +1,7 @@
+[ req ]
+prompt = no
+distinguished_name = req_dn
+
+[ req_dn ]
+CN = workshop20
+
