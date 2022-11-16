@@ -11,7 +11,7 @@ var x = dba.createCluster('mycluster', {exitStateAction:'OFFLINE_MODE',
 	interactive:false,
 	autoRejoinTries:120,
 	memberWeight:80,
-	replicationAllowedHost:'10.0.0.0/16',
+	replicationAllowedHost:'$CLUSTER_IPALLOWLIST',
 	memberSslMode:'VERIFY_CA', 
 	communicationStack:'MYSQL'
 	})
