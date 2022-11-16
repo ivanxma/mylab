@@ -12,6 +12,11 @@ export CLUSTER_IPALLOWLIST=10.0.0.0/16
 export SECONDARY_HOST=$HOSTNAME
 export PRIMARY_HOST=$HOSTNAME
 
+export HOST1=workshop20
+export HOST2=workshop22
+export HOST3=workshop23
+
+
 
 if [ ! -r config/gencnf.touch ]
 then
