@@ -2,11 +2,19 @@
 
 pkill -9 mysqld
 
-
-if [ $# -eq 0 ]
+if [ "$HOST1" == "$HOSTNAME" ]
 then
-	mysqld_safe --defaults-file=config/my1.cnf &
-else
-	mysqld_safe --defaults-file=config/my${1}.cnf &
+  SERVERID=101
 fi
+if [ "$HOST2" == "$HOSTNAME" ]
+then
+  SERVERID=201
+fi
+if [ "$HOST3" == "$HOSTNAME" ]
+then
+  SERVERID=301
+fi
+
+mysqld_safe --defaults-file=config/my1.cnf --server_id=$SERVERID &
+
 	
