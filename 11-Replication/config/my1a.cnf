@@ -21,8 +21,8 @@ binlog-format=statement
 
 gtid-mode=off
 #enforce-gtid-consistency
-master_info_repository=TABLE
-relay_log_info_repository=TABLE
+#master_info_repository=TABLE
+#relay_log_info_repository=TABLE
 #slave_parallel_type=LOGICAL_CLOCK
 #slave_parallel_workers=5
 

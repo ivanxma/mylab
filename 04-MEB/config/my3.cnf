@@ -14,8 +14,8 @@ log-slave-updates=true
 
 gtid-mode=on
 enforce-gtid-consistency
-master_info_repository=TABLE
-relay_log_info_repository=TABLE
+#master_info_repository=TABLE
+#relay_log_info_repository=TABLE
 
 server-id=103
 binlog_checksum=none

@@ -15,8 +15,8 @@ gtid-mode=on
 enforce-gtid-consistency=true
 # gtid enable---END
 
-master-info-repository=TABLE
-relay-log-info-repository=TABLE
+#master-info-repository=TABLE
+#relay-log-info-repository=TABLE
 
 sync-master-info=1
 report-port=3306

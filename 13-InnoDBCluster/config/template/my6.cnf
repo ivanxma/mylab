@@ -18,8 +18,8 @@ enforce-gtid-consistency=true
 log-slave-updates=true
 
 # Table based repositories
-master-info-repository=TABLE
-relay-log-info-repository=TABLE
+#master-info-repository=TABLE
+#relay-log-info-repository=TABLE
 
 # Extraction Algorithm
 transaction-write-set-extraction=XXHASH64
