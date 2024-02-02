@@ -1,6 +1,7 @@
+MYPATH=$PWD
 if [ -d /var/www/html ]
 then
-  cd /var/www/html;sudo unzip /opt/download/wordpress-4.7.2.zip
+  cd /var/www/html;sudo unzip $MYPATH/latest.zip
   sudo chown -R apache:apache /var/www/html/wordpress
   sudo systemctl restart httpd
 else
