@@ -2,7 +2,7 @@
 
 pkill -9 mysqld
 
-mysqlsh -i  -e "
+mysqlsh --js -i  -e "
 
  dba.startSandboxInstance(3310);
  dba.startSandboxInstance(3320);

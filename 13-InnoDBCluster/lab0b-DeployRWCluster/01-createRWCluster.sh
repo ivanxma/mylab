@@ -2,7 +2,7 @@
 
 pkill -9 mysqld
 
-mysqlsh << EOL
+mysqlsh --js << EOL
 
 dba.deploySandboxInstance(3310, {password:'welcome1'});
 dba.deploySandboxInstance(3320, {password:'welcome1'});
