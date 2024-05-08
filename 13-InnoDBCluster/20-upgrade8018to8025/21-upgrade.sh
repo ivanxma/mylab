@@ -3,7 +3,7 @@ echo "Assuming 3310 as Primary node"
 echo "Press <ENTER> to continue to upgrade metadata"
 read
 
-/usr/local/shell8025/bin/mysqlsh --uri root@localhost:3310 << EOF
+/usr/local/shell8025/bin/mysqlsh --js --uri root@localhost:3310 << EOF
 
 dba.upgradeMetadata()
 
@@ -25,7 +25,7 @@ sleep 20
 /usr/local/mysql8025/bin/mysqld_safe --defaults-file=config8025/my3.cnf &
 sleep 30
 
-mysqlsh --uri gradmin:grpass@`hostname`:3310 -e "print(dba.getCluster().status());"
+mysqlsh --js --uri gradmin:grpass@`hostname`:3310 -e "print(dba.getCluster().status());"
 
 
 echo -n "Press <ENTER> to continue to upgrade 3320"
@@ -37,7 +37,7 @@ sleep 20
 /usr/local/mysql8025/bin/mysqld_safe --defaults-file=config8025/my2.cnf &
 sleep 30
 
-mysqlsh --uri gradmin:grpass@`hostname`:3310 -e "print(dba.getCluster().status());"
+mysqlsh --js --uri gradmin:grpass@`hostname`:3310 -e "print(dba.getCluster().status());"
 echo -n "Press <ENTER> to continue to upgrade 3310"
 read
 
@@ -47,7 +47,7 @@ sleep 20
 /usr/local/mysql8025/bin/mysqld_safe --defaults-file=config8025/my1.cnf &
 sleep 30
 
-mysqlsh --uri gradmin:grpass@`hostname`:3310 -e "print(dba.getCluster().status());"
+mysqlsh --js --uri gradmin:grpass@`hostname`:3310 -e "print(dba.getCluster().status());"
 
 
 
