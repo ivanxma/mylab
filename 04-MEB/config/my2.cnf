@@ -10,7 +10,7 @@ mysqlx-socket=/home/mysql/data/3316/myx.sock
 
 log-bin=mysqllog.bin
 relay-log=relay.bin
-log-slave-updates=true
+log-replica-updates=true
 
 gtid-mode=on
 enforce-gtid-consistency
@@ -18,5 +18,5 @@ enforce-gtid-consistency
 #relay_log_info_repository=TABLE
 
 server-id=102
-binlog_checksum=none
+#binlog_checksum=none
 
