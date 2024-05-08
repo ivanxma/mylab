@@ -11,11 +11,11 @@
 mysql -uroot -h127.0.0.1 -P3306  << EOF
 
 CHANGE REPLICATION SOURCE TO
-  master_host = '$CLUSTER_HOST',
-  master_port = 3330,
-  master_user = 'repl',
-  master_password = 'repl',
-  master_auto_position=1,
+  source_host = '$CLUSTER_HOST',
+  source_port = 3330,
+  source_user = 'repl',
+  source_password = 'repl',
+  source_auto_position=1,
   SOURCE_CONNECTION_AUTO_FAILOVER=1, 
   SOURCE_RETRY_COUNT=3, 
   SOURCE_CONNECT_RETRY=5 
@@ -35,11 +35,11 @@ EOF
 mysql -uroot -h127.0.0.1 -P3316  << EOF
 
 CHANGE REPLICATION SOURCE TO
-  master_host = '$CLUSTER_HOST',
-  master_port = 3320,
-  master_user = 'repl',
-  master_password = 'repl',
-  master_auto_position=1,
+  source_host = '$CLUSTER_HOST',
+  source_port = 3320,
+  source_user = 'repl',
+  source_password = 'repl',
+  source_auto_position=1,
   SOURCE_CONNECTION_AUTO_FAILOVER=1, 
   SOURCE_RETRY_COUNT=3, 
   SOURCE_CONNECT_RETRY=5 
