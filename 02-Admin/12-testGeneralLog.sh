@@ -10,4 +10,4 @@ select * from mysql.user where 4=5;
 set global general_log=false;
 EOL
 
-tail -n 10 /home/mysql/data/lab02/virtual-41.log
+tail -n 10 /home/mysql/data/lab02/my.error

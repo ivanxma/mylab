@@ -12,8 +12,8 @@ drop user if exists user3@'localhost';
 
 create user user0 identified by 'user0';
 create user user1@'localhost' identified by 'user1';
-create user user2@'%' identified with mysql_native_password by 'user2';
-create user user2@'localhost' identified with mysql_native_password by 'user2';
+create user user2@'%' identified by 'user2';
+create user user2@'localhost' identified by 'user2';
 create user user3@'localhost' identified by 'user3';
 
 
