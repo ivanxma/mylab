@@ -8,33 +8,33 @@ mysqlx-port=33160
 mysqlx-socket=/home/mysql/data/3316/myx.sock
 log-bin=logbin
 relay-log=logrelay
-binlog-format=row
-binlog-checksum=NONE
+#binlog-format=row
+#binlog-checksum=NONE
 server-id=911
 
 # enable gtid
 gtid-mode=on
 enforce-gtid-consistency=true
-log-slave-updates=true
+log-replica-updates=true
 
 # Table based repositories
 #master-info-repository=TABLE
 #relay-log-info-repository=TABLE
 
 # Extraction Algorithm
-transaction-write-set-extraction=XXHASH64
-report-host=$BRIDGE_HOST
+#transaction-write-set-extraction=XXHASH64
+#report-host=$BRIDGE_HOST
 
 # replication filter
 replicate-ignore-db=$BRIDGE_CHANNEL:mysql_innodb_cluster_metadata
 replicate-ignore-db=$BRIDGE_DRCHANNEL:mysql_innodb_cluster_metadata
 binlog-ignore-db=mysql_innodb_cluster_metadata
 
-# parallel slave
-slave_parallel_type=LOGICAL_CLOCK
-slave_parallel_workers=2
-slave_preserve_commit_order=1
-binlog_transaction_dependency_tracking=WRITESET
+# parallel replica
+replica_parallel_type=LOGICAL_CLOCK
+replica_parallel_workers=2
+replica_preserve_commit_order=1
+#binlog_transaction_dependency_tracking=WRITESET
 
 # 7 days expire days
 # default is 30 days = 2592000

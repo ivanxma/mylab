@@ -1,7 +1,7 @@
 . ./comm.sh
 
 
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3340', {exitStateAction:'OFFLINE_MODE', 
 	ipAllowlist:'$CLUSTER_IPALLOWLIST',
@@ -12,7 +12,7 @@ x.addInstance('gradmin:grpass@$SECONDARY_HOST:3340', {exitStateAction:'OFFLINE_M
 	})
 print(x.status())
 "
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3350', {exitStateAction:'OFFLINE_MODE', 
 	ipAllowlist:'$CLUSTER_IPALLOWLIST',
@@ -23,7 +23,7 @@ x.addInstance('gradmin:grpass@$SECONDARY_HOST:3350', {exitStateAction:'OFFLINE_M
 	})
 print(x.status())
 "
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3360', {exitStateAction:'OFFLINE_MODE', 
 	ipAllowlist:'$CLUSTER_IPALLOWLIST',
@@ -35,7 +35,7 @@ x.addInstance('gradmin:grpass@$SECONDARY_HOST:3360', {exitStateAction:'OFFLINE_M
 print(x.status())
 "
 echo "Remvoing Cluster member $SECONDARY_HOST:3340/3350/3360"
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 x = dba.getCluster()
 x.removeInstance('$SECONDARY_HOST:3360')
 x.removeInstance('$SECONDARY_HOST:3350')
@@ -45,14 +45,13 @@ print(x.status())
 echo "finished - Remvoing Cluster member $SECONDARY_HOST:3340/3350/3360"
 
 
-mysqlsh --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
+mysqlsh --js --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
 
 var x = dba.createCluster('mycluster2', {exitStateAction:'OFFLINE_MODE',
 	consistency:'BEFORE_ON_PRIMARY_FAILOVER',
 	expelTimeout:30,
 	memberSslMode:'REQUIRED',
 	ipAllowlist:'$CLUSTER_IPALLOWLIST',
-	clearReadOnly:true,
 	interactive:false,
 	localAddress:'$SECONDARY_HOST:13340',
 	autoRejoinTries:120,
@@ -64,7 +63,7 @@ print(x.status())
 
 sleep 5
 
-mysqlsh --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
+mysqlsh --js --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3350', {exitStateAction:'OFFLINE_MODE', 
 	ipAllowlist:'$CLUSTER_IPALLOWLIST',
@@ -78,7 +77,7 @@ print(x.status())
 
 sleep 5
 
-mysqlsh --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
+mysqlsh --js --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3360', {exitStateAction:'OFFLINE_MODE', 
 	ipAllowlist:'$CLUSTER_IPALLOWLIST',

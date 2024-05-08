@@ -8,31 +8,31 @@ mysqlx-port=33400
 mysqlx-socket=/home/mysql/data/3340/myx.sock
 log-bin=logbin
 relay-log=logrelay
-binlog-format=row
-binlog-checksum=NONE
+#binlog-format=row
+#binlog-checksum=NONE
 server-id=104
 
 # enable gtid
 gtid-mode=on
 enforce-gtid-consistency=true
-log-slave-updates=true
+log-replica-updates=true
 
 # Table based repositories
 #master-info-repository=TABLE
 #relay-log-info-repository=TABLE
 
 # Extraction Algorithm
-transaction-write-set-extraction=XXHASH64
-report-host=$SECONDARY_HOST
+#transaction-write-set-extraction=XXHASH64
+#report-host=$SECONDARY_HOST
 
-# skip start slave
-skip-slave-start=1
+# skip start replica
+skip-replica-start=1
 
-# parallel slave
-slave_parallel_type=LOGICAL_CLOCK
-slave_parallel_workers=2
-slave_preserve_commit_order=1
-binlog_transaction_dependency_tracking=WRITESET
+# parallel replica
+replica_parallel_type=LOGICAL_CLOCK
+replica_parallel_workers=2
+replica_preserve_commit_order=1
+#binlog_transaction_dependency_tracking=WRITESET
 
 
 # 7 days expire days
