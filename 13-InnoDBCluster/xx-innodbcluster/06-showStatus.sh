@@ -13,12 +13,12 @@ else
 	MYPORT=3310
 fi
 
-mysqlsh --uri gradmin:grpass@${MYHOST}:${MYPORT} -e "
+mysqlsh --js --uri gradmin:grpass@${MYHOST}:${MYPORT} -e "
 print(dba.getCluster().status());
 "
 
 echo "Press <ENTER> to continue to show options"
 read
-mysqlsh --uri gradmin:grpass@${MYHOST}:${MYPORT} -e "
+mysqlsh --js --uri gradmin:grpass@${MYHOST}:${MYPORT} -e "
 print(dba.getCluster().options());
 "
