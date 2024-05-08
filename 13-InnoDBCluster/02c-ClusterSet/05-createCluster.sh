@@ -1,6 +1,6 @@
 . ./comm.sh
 
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 
 x = dba.getCluster()
 x.createClusterSet('myclusterset')
@@ -21,7 +21,7 @@ print(y.status())
 
 sleep 5
 
-mysqlsh --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
+mysqlsh --js --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3350', {exitStateAction:'OFFLINE_MODE', 
 	recoveryMethod:'incremental', 
@@ -33,7 +33,7 @@ print(x.status())
 
 sleep 5
 
-mysqlsh --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
+mysqlsh --js --uri gradmin:grpass@$SECONDARY_HOST:3340 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3360', {exitStateAction:'OFFLINE_MODE', 
 	recoveryMethod:'incremental', 
