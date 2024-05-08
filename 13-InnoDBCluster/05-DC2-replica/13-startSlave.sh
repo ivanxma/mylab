@@ -6,8 +6,8 @@
 
 mysql -uroot -h127.0.0.1 -P3340  << EOF
 
-start slave for channel 'channel1';
+start REPLICA for channel 'channel1';
 -- set persist super_read_only=1;
-SHOW SLAVE STATUS FOR CHANNEL 'channel1'\G
+SHOW REPLICA STATUS FOR CHANNEL 'channel1'\G
 
 EOF

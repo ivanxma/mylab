@@ -13,6 +13,6 @@ else
 	MYPORT=3310
 fi
 
-mysqlsh --uri gradmin:grpass@${MYHOST}:${MYPORT} << EOL
+mysqlsh --js --uri gradmin:grpass@${MYHOST}:${MYPORT} << EOL
 print(dba.getCluster().status());
 EOL
