@@ -1,8 +1,8 @@
 . ./comm.sh
 
-mysqlsh -e "
+mysqlsh --js -e "
 dba.configureInstance('root:@localhost:3340',{clusterAdmin:'gradmin',clusterAdminPassword:'grpass'});"
-mysqlsh -e "
+mysqlsh --js -e "
 dba.configureInstance('root:@localhost:3350',{clusterAdmin:'gradmin',clusterAdminPassword:'grpass'});"
-mysqlsh -e "
+mysqlsh --js -e "
 dba.configureInstance('root:@localhost:3360',{clusterAdmin:'gradmin',clusterAdminPassword:'grpass'});"

@@ -42,15 +42,15 @@ EOL
 
 mysql -ugradmin -pgrpass -h$BRIDGE_HOST -P3306   << EOF
 
-CHANGE MASTER TO
-  master_host = '$SECONDARY_HOST',
-  master_port = 3350,
-  master_user = 'repl',
-  master_password = 'repl',
-  master_auto_position=1,
+CHANGE REPLICATION SOURCE TO
+  source_host = '$SECONDARY_HOST',
+  source_port = 3350,
+  source_user = 'repl',
+  source_password = 'repl',
+  source_auto_position=1,
   SOURCE_CONNECTION_AUTO_FAILOVER=1,
-  MASTER_RETRY_COUNT=3,
-  MASTER_CONNECT_RETRY=5
+  SOURCE_RETRY_COUNT=3,
+  SOURCE_CONNECT_RETRY=5
 FOR CHANNEL '$BRIDGE_DRCHANNEL';
 
 
@@ -65,15 +65,15 @@ SHOW REPLICA STATUS FOR CHANNEL '$BRIDGE_DRCHANNEL'\G
 EOF
 mysql -ugradmin -pgrpass -h$BRIDGE_HOST -P3316   << EOF
 
-CHANGE MASTER TO
-  master_host = '$SECONDARY_HOST',
-  master_port = 3360,
-  master_user = 'repl',
-  master_password = 'repl',
-  master_auto_position=1,
+CHANGE REPLICATION SOURCE TO
+  source_host = '$SECONDARY_HOST',
+  source_port = 3360,
+  source_user = 'repl',
+  source_password = 'repl',
+  source_auto_position=1,
   SOURCE_CONNECTION_AUTO_FAILOVER=1,
-  MASTER_RETRY_COUNT=3,
-  MASTER_CONNECT_RETRY=5
+  SOURCE_RETRY_COUNT=3,
+  SOURCE_CONNECT_RETRY=5
 FOR CHANNEL '$BRIDGE_DRCHANNEL';
 
 

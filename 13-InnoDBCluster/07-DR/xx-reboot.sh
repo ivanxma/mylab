@@ -19,6 +19,5 @@ echo "Start - Restarting 3310, 3320 and 3330 without loading persisted variables
 
 sleep 10
 
-mysqlsh --uri gradmin:grpass@primary:3310 -e " \
-  dba.rebootClusterFromCompleteOutage('mycluster', { \
-    clearReadOnly:true});"
+mysqlsh --js --uri gradmin:grpass@primary:3310 -e " \
+  dba.rebootClusterFromCompleteOutage('mycluster',NULL);"
