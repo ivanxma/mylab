@@ -3,7 +3,7 @@
 
 if [ "$1" == "3340" ]
 then
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 
 var x = dba.getCluster('mycluster');
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3340', {exitStateAction:'OFFLINE_MODE', 
@@ -20,7 +20,7 @@ fi
 if [ "$1" == "3350" ]
 then
 
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY_HOST:3350', {exitStateAction:'OFFLINE_MODE', 
 	recoveryMethod:'incremental', 

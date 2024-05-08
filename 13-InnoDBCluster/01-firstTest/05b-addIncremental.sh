@@ -2,7 +2,7 @@
 
 
 
-mysqlsh --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$CLUSTER_HOST:3310 -e "
 x = dba.getCluster()
 
 x.addInstance('gradmin:grpass@$CLUSTER_HOST:3320', {exitStateAction:'OFFLINE_MODE',
