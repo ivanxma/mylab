@@ -8,7 +8,7 @@ fi
 
 tail -6 $0
 #
-# 1. change the mysql root user using mysql_native_password plugin
+# 1. change the mysql root user if needed
 # 2. create database docstore
 # 3. change the /etc/php.ini with
 #	 short_open_tag=1
