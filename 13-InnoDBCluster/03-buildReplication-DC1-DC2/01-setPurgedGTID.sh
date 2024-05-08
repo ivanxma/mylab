@@ -1,6 +1,6 @@
 . ./comm.sh
 
-mysqlsh << EOF
+mysqlsh --js << EOF
 
 c1=mysql.getSession('gradmin:grpass@$CLUSTER_HOST:3310')
 q1=c1.runSql('select @@gtid_executed;')
