@@ -4,7 +4,7 @@ pkill -9 mysqld
 for i in `ls -1 $HOME/mysql-sandboxes`
 do
 	
-mysqlsh << EOL
+mysqlsh --js << EOL
 
 dba.deleteSandboxInstance($i);
 

@@ -1,6 +1,6 @@
 . ./comm.sh
 
-mysqlsh << EOL
+mysqlsh --js << EOL
 
 dba.startSandboxInstance(3310);
 

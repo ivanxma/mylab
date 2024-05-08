@@ -1,6 +1,6 @@
 . ./comm.sh
 
-mysqlsh << EOL
+mysqlsh --js << EOL
 
 dba.stopSandboxInstance(3310, {password:"welcome1"});
 
