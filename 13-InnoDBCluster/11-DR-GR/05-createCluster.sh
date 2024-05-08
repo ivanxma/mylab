@@ -1,7 +1,7 @@
 . ./comm.sh
 
 
-mysqlsh --uri gradmin:grpass@$PRIMARY:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$PRIMARY:3310 -e "
 
 x = dba.getCluster()
 
@@ -15,7 +15,7 @@ print(x.status())
 "
 
 
-mysqlsh --uri gradmin:grpass@$PRIMARY:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$PRIMARY:3310 -e "
 
 x = dba.getCluster()
 
@@ -30,7 +30,7 @@ print(x.status())
 
 sleep 5
 
-mysqlsh --uri gradmin:grpass@$PRIMARY:3310 -e "
+mysqlsh --js --uri gradmin:grpass@$PRIMARY:3310 -e "
 x = dba.getCluster()
 x.addInstance('gradmin:grpass@$SECONDARY:3360', {exitStateAction:'OFFLINE_MODE', 
 	recoveryMethod:'incremental', 

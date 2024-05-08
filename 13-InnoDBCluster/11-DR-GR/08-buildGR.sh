@@ -1,7 +1,7 @@
 . ./comm.sh
 
 
-mysqlsh  << EOF
+mysqlsh --js  << EOF
 
 
 c1=mysql.getSession('gradmin:grpass@$SECONDARY:3340')

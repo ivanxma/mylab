@@ -4,7 +4,7 @@
 #
 #
 
-mysqlsh --uri gradmin:grpass@$PRIMARY:3310 << EOL
+mysqlsh --js --uri gradmin:grpass@$PRIMARY:3310 << EOL
 
 var v = session.runSql('select @@group_replication_group_name;').fetchAll();
 var gname = v[0][0];
