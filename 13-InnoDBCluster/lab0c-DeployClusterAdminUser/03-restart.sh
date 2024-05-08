@@ -1,5 +1,5 @@
 PGM=`basename $0`
 . ./comm.sh
-mysqlsh -f stop.sc
-mysqlsh -f start.sc
+mysqlsh --js -f stop.sc
+mysqlsh --js -f start.sc
 
