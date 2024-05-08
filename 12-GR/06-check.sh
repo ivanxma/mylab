@@ -9,7 +9,7 @@ select m.* from performance_schema.replication_group_members m left join perform
 
 "
 
-mysqlsh << EOL
+mysqlsh --js << EOL
 
 var mysql=require('mysql');
 

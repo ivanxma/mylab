@@ -5,9 +5,9 @@ echo "Upgrade Checking only with MySQL 5.7 to MySQL 8.0"
 echo "This is only a demonstration for the util package with MySQL Shell"
 echo "*******************************************************************"
 
-mysqlsh root@127.0.0.1:3306 -e "util.checkForServerUpgrade();"
-mysqlsh root@127.0.0.1:3316 -e "util.checkForServerUpgrade();"
-mysqlsh root@127.0.0.1:3326 -e "util.checkForServerUpgrade();"
+mysqlsh --js root@127.0.0.1:3306 -e "util.checkForServerUpgrade();"
+mysqlsh --js root@127.0.0.1:3316 -e "util.checkForServerUpgrade();"
+mysqlsh --js root@127.0.0.1:3326 -e "util.checkForServerUpgrade();"
 
 
 

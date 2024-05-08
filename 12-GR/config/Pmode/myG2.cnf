@@ -5,24 +5,25 @@ basedir=/usr/local/mysql
 port=3316
 socket=/home/mysql/data2/my.sock
 log-bin
-binlog-format=row
-binlog-checksum=NONE
+#binlog-format=row
+#binlog-checksum=NONE
 server-id=102
 # enable gtid
 gtid-mode=on
 enforce-gtid-consistency=true
-log-slave-updates=true
+log-replica-updates=true
 # Table based repositories
 #master-info-repository=TABLE
 #relay-log-info-repository=TABLE
 # Extraction Algorithm
-transaction-write-set-extraction=XXHASH64
+#transaction-write-set-extraction=XXHASH64
 plugin-load=group_replication.so
 group_replication_group_name=8a94f357-aab4-11df-86ab-c80aa9429562
 group_replication_recovery_retry_count=2
 group_replication_recovery_reconnect_interval=120
-group_replication_local_address=primary:4316
-group_replication_group_seeds=primary:4306,primary:4316,primary:4326,secondary:4306,secondary:4316
+group_replication_local_address=127.0.0.1:4316
+group_replication_group_seeds=127.0.0.1:4306,127.0.0.1:4316,127.0.0.1:4326
+group_replication_communication_stack=XCOM
 group_replication_bootstrap_group=0
 group_replication_start_on_boot=1
 
@@ -31,7 +32,7 @@ group_replication_single_primary_mode=true
 #group_replication_enforce_update_everywhere_checks=true
 
 #multi-thread
-slave_parallel_type=logical_clock
-slave_preserve_commit_order=ON
-slave_parallel_workers=3
+replica_parallel_type=logical_clock
+replica_preserve_commit_order=ON
+replica_parallel_workers=3
 

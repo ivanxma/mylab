@@ -6,14 +6,14 @@ port=3316
 socket=/home/mysql/data2/my.sock
 log-bin
 binlog-format=row
-binlog-checksum=NONE
+#binlog-checksum=NONE
 server-id=102
 # enable gtid
-gtid-mode=off
-#enforce-gtid-consistency=true
-log-slave-updates=true
+gtid-mode=on
+enforce-gtid-consistency=true
+log-replica-updates=true
 # Table based repositories
 #master-info-repository=TABLE
 #relay-log-info-repository=TABLE
 # Extraction Algorithm
-transaction-write-set-extraction=XXHASH64
+#transaction-write-set-extraction=XXHASH64
