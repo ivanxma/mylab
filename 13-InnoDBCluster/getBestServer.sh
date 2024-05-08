@@ -30,7 +30,7 @@ then
 	exit
 fi
 
-mysqlsh --js << EOF
+mysqlsh --js --js << EOF
 
 x0 = mysql.getSession("${USER}:${PASS}@${SERVER}" ) 
 
