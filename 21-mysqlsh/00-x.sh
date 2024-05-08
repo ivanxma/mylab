@@ -13,7 +13,7 @@ EOL
 mysql -uroot -h127.0.0.1 -P3310 -pwelcome1 << EOL2
 
 -- show plugins;
-CREATE USER IF NOT EXISTS mysqlxsys@localhost IDENTIFIED WITH mysql_native_password BY 'password' ACCOUNT LOCK;
+CREATE USER IF NOT EXISTS mysqlxsys@localhost IDENTIFIED BY 'password' ACCOUNT LOCK;
 GRANT SELECT ON mysql.user TO mysqlxsys@localhost;
 GRANT SUPER ON *.* TO mysqlxsys@localhost;
 
