@@ -13,10 +13,10 @@ relay-log=relay.bin
 
 gtid-mode=on
 enforce-gtid-consistency
-log-slave-updates=true
+log-replica-updates=true
 
 #master_info_repository=TABLE
 #relay_log_info_repository=TABLE
 
 server-id=101
-binlog-checksum=none
+#binlog-checksum=none

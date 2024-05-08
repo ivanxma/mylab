@@ -7,6 +7,6 @@ echo "The temporary password for root@'localhost' is $PASS  "
 echo "The password is changed to 'mysql'"
 
 mysql -uroot -h127.0.0.1 -P3306 -p"$PASS"  --connect-expired-password << EOL
-alter user root@'localhost' identified with 'mysql_native_password' by 'mysql';
+alter user root@'localhost' identified by 'mysql';
 EOL
 
