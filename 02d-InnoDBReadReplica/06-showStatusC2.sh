@@ -1,0 +1,4 @@
+. ./comm.sh
+MYHOST=$CLUSTER_HOST
+MYPORT=3340
+./06-showStatus.sh $MYHOST $MYPORT
