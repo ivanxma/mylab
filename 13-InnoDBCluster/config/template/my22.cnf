@@ -1,0 +1,35 @@
+[mysqld]
+datadir=/home/mylab/data/4420
+basedir=/usr/local/mysql
+log-error=/home/mylab/data/4420/my.error
+port=4420
+socket=/home/mylab/data/4420/my.sock
+mysqlx-port=44200
+mysqlx-socket=/home/mylab/data/4420/myx.sock
+log-bin=logbin
+relay-log=logrelay
+binlog-format=row
+binlog-checksum=NONE
+server-id=1012
+
+# enable gtid
+gtid-mode=on
+enforce-gtid-consistency=true
+log-slave-updates=true
+
+# Table based repositories: Removed in innovation release 8.3.0
+# master-info-repository=TABLE
+# relay-log-info-repository=TABLE
+
+# Extraction Algorithm
+# transaction-write-set-extraction=XXHASH64
+report-host=$CLUSTER_HOST
+
+# skip start slave
+skip-slave-start=1
+
+# parallel slave
+slave_parallel_type=LOGICAL_CLOCK
+slave_parallel_workers=2
+slave_preserve_commit_order=1
+# binlog_transaction_dependency_tracking=WRITESET
